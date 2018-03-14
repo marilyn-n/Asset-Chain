@@ -1,0 +1,11 @@
+<form>
+  <h2> Login </h2>
+  <label> Username </label>
+  <input type="text" [(ngModel)]="formInfo.username" name="username"/>
+  <br>
+  <label> Password </label>
+  <input type="password" [(ngModel)]="formInfo.password" name="password"/>
+
+  <button (click)="sendForm()"> login </button>
+</form>
+<p class="error"> {{ error }} </p>
