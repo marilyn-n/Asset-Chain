@@ -14,9 +14,12 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
-  logout(){
+  logout() {
     console.log('entro');
     this.sessionS.logout()
       .subscribe(() => this.router.navigate( [ '/' ] ));
   }
+
+
+
 }

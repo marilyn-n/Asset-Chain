@@ -7,9 +7,11 @@ import { MyPrivatePageComponent } from '../my-private-page/my-private-page.compo
 import { TestamentComponent } from '../testament/testament.component';
 import { AssetComponent } from '../asset/asset.component';
 import { PaymentMethodComponent } from '../payment-method/payment-method.component';
+import { HomeComponent } from '../home/home.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full' },
+    {path: '', component: HomeComponent },
     {path: 'login' , component: AuthLoginComponent},
     {path: 'signup' , component: AuthSignupComponent},
     {path: 'private', component: MyPrivatePageComponent},

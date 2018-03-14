@@ -6,7 +6,11 @@ const userSchema = new Schema({
   lastName: String,
   email: String,
   password: String,
-  photo: String
+  photo: String,
+  docs:[{
+    type:Schema.Types.ObjectId,
+    ref:"Testament"
+  }]
 }, {
   timestamps: {
     createdAt: "created_at",

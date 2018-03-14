@@ -10,16 +10,18 @@ const Testament    = require("../models/Testament.js");
 
 router.post('/add-document', (req, res, next) =>{
  return res.status(403).json({ message: "start creating testament" });
-
+//save in the model Testament
+//push the testament to user
+//where the f... is the user? (req.user)
 });
 
 router.post('/assets&benefitiaries', (req, res) =>{
+  //files
   return res.status(403).json({ message: "choose benefitiaries and add assets" });
 });
 
 router.post('/payment-method',(req, res) => {
   return res.status(403).json({ message: "payment method whaaat" });
-
 });
 
 

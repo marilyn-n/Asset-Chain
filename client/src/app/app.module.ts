@@ -19,6 +19,7 @@ import { PaymentMethodComponent } from './payment-method/payment-method.componen
 // routes
 import { routes } from './routes/app.routing';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RouterModule } from '@angular/router';
     MyPrivatePageComponent,
     TestamentComponent,
     AssetComponent,
-    PaymentMethodComponent
+    PaymentMethodComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
