@@ -1,1 +1,21 @@
+form{
+  padding: 0 25em;
+}
 
+
+img{
+  border-radius: 100%;
+  margin-left: 200px;
+}
+
+#file-input{ 
+position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;
+}

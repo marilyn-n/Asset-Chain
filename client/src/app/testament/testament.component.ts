@@ -8,10 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./testament.component.css']
 })
 export class TestamentComponent implements OnInit {
+  testamentForm = {
+    owner: '',
+    description: ''
+  };
 
   constructor(private testamentS: TestamentService, private route: Router) { }
 
   ngOnInit() {
   }
 
+  sendTestamentForm(testamentForm) {
+    console.log('whaat');
+    this.testamentS.testamento(testamentForm.owner, testamentForm.description)
+      .subscribe(respuesta => this.route.navigate(['assets/benefitiaries']));
+ }
 }

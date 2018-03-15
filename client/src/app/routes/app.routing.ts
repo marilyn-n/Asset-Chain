@@ -16,6 +16,6 @@ export const routes: Routes = [
     {path: 'signup' , component: AuthSignupComponent},
     {path: 'private', component: MyPrivatePageComponent},
     {path: 'add-document', component: TestamentComponent},
-    {path: 'assets&benefitiaries', component: AssetComponent},
+    {path: 'assets/benefitiaries', component: AssetComponent},
     {path: 'payment-method', component: PaymentMethodComponent}
 ];

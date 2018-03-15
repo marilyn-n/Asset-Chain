@@ -22,7 +22,8 @@ authController.post("/signup", (req, res, next) => {
       username:req.body.username,
       lastName: req.body.lastName,
       email:req.body.email,
-      password: hashPass
+      password: hashPass,
+      
     });
 
     console.log(newUser);

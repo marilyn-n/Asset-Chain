@@ -6,11 +6,17 @@ import { Http, Response} from '@angular/http';
 
 @Injectable()
 export class TestamentService {
-  base_URL= 'http://localhost:3000/api';
+  base_URL= 'http://localhost:3000/';
   options= { withCredentials: true};
   constructor(private http: Http) { }
   handleError(e) {
     return Observable.throw(e.json().message);
+  }
+
+  testamento(owner, description) {
+    return this.http.post(`${this.base_URL}/add-document`, {owner, description}, this.options)
+      .map(res => res.json())
+      .catch(err => this.handleError(err));
   }
 
 }

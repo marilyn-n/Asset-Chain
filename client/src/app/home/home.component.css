@@ -1,6 +1,40 @@
+
+
 video{
   position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
+  width: 1280px;
+ 
 }
+
+.logo{
+  position: relative;
+  top:110px;
+  left: 300px;
+}
+
+button{
+  position: relative;
+  left: 640px;
+  bottom:26px;
+  background-color: black;
+  padding: 15px 55px;
+  border-color: black !important;
+}
+
+a, span{
+  color: white;
+}
+
+span{
+  position: relative;
+  bottom: 6px;
+  left: 5px;
+  padding: 5px;
+}
+
+/* nav{
+  width: 100px;
+} */

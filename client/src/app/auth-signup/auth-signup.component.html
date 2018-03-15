@@ -4,7 +4,8 @@
       <label for="file-input">
           <img src="https://cdn2.iconfinder.com/data/icons/picons-basic-2/57/basic2-200_camera_import_images_photos-256.png" width="100px;"/>
       </label>
-      <input id="file-input" type="file"/>
+  <a class="btn-floating btn-large waves-effect waves-light red"><input id="file-input" type="file"/><i class="material-icons">add</i></a>
+      
   </div>
   <br>
   <label> First Name </label>
@@ -21,6 +22,9 @@
   <input type="radio" name="gender" value="male" checked> Male<br>
   <input type="radio" name="gender" value="female"> Female<br>
   <br>
-  <button type="submit"> Create Account </button>
+  <button class="btn waves-effect waves-light" type="submit" name="action">Create Account
+        <i class="material-icons right">send</i>
+      </button>
 </form>
 <p class="error"> {{ error }} </p>
+
