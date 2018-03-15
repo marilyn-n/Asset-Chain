@@ -6,7 +6,8 @@ const cookieParser   = require("cookie-parser");
 const bodyParser     = require("body-parser");
 const cors           = require("cors");
 const authController = require("./routes/authController");
-const testamentController = require('./routes/testament.js');
+const testamentController = require('./routes/testamentController.js');
+const assetController = require('./routes/assetController')
 const session        = require("express-session");
 const passport       = require("passport");
 const app            = express();
@@ -48,7 +49,9 @@ require("./config/passport")(passport,app);
 
 //routes
 app.use('/api', authController);
-app.use('/', testamentController);
+app.use('/api/testament', testamentController);
+app.use('/api/asset', assetController);
+
 app.all('/*', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });

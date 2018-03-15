@@ -13,11 +13,15 @@ export class TestamentService {
     return Observable.throw(e.json().message);
   }
 
-  testamento(owner, description) {
-    return this.http.post(`${this.base_URL}/add-document`, {owner, description}, this.options)
-      .map(res => res.json())
-      .catch(err => this.handleError(err));
+  getAllTestament() {
+    return this.http.get('http://localhost:3000/api/testament/')
+      .map(res => res.json());
   }
+
+  postNewTestament(testament):Observable<any> {
+    return this.http.post('http://localhost:3000/api/testament/new', testament, this.options)
+      .map(res => res.json())
+      .catch(err => this.handleError(err));  }
 
 }
 

@@ -2,15 +2,16 @@ const mongoose = require("mongoose");
 const Schema   = mongoose.Schema;
 
 const assetSchema = new Schema({
-  file: {type: String},
-  email: {type: String},
-  testamentId: {type: String},
-  description: {type: String}
+  idTestament:{ type: Schema.Types.ObjectId, ref: 'Testament'},
+  title:{type:String},
+  emailTo: {type: String},
+  description: {type: String},
+  docs: [{type:String}]
 }, {
   timestamps: {
     createdAt: "created_at",
     updatedAt: "updated_at"
-  }
+  },
 });
 
 

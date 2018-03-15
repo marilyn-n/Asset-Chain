@@ -1,16 +1,32 @@
+ <section id="main">
 
-<section id="main">
-  <ul>
-      <li><a [routerLink]="['/']">Home</a></li>
-      <li><a [routerLink]="['/login']">Sign In</a></li>
-      <li><a [routerLink]="['/signup']">Sign Up</a></li>
-      <li><a href (click)="logout()">Sign Out</a></li>
-      <li><a [routerLink]="['/add-document']">Add Document</a></li>
-      <li><a [routerLink]="['/payment-method']">Payment Method</a></li>
-      <li><a [routerLink]="['/assets/benefitiaries']">Assets & Benefitiaries</a></li>
-
-  </ul>
+<nav>
+    <div class="nav-wrapper">
+      <img src="assets/ac-logo.png" alt="" width="170px;"><a href="assets/ac-logo.png" class="brand-logo"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+          <li><a [routerLink]="['/']">Home</a></li>
+          <li><a [routerLink]="['/login']">Sign In</a></li>
+          <li><a [routerLink]="['/signup']">Sign Up</a></li>
+          <li><a href (click)="logout()">Sign Out</a></li>
+          <li><a [routerLink]="['/add-document']">Add Document</a></li>
+          <li><a [routerLink]="['/payment-method']">Payment Method</a></li>
+          <li><a [routerLink]="['/assets/benefitiaries']">Assets & Benefitiaries</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+          <li><a [routerLink]="['/']">Home</a></li>
+          <li><a [routerLink]="['/login']">Sign In</a></li>
+          <li><a [routerLink]="['/signup']">Sign Up</a></li>
+          <li><a href (click)="logout()">Sign Out</a></li>
+          <li><a [routerLink]="['/add-document']">Add Document</a></li>
+          <li><a [routerLink]="['/payment-method']">Payment Method</a></li>
+          <li><a [routerLink]="['/assets/benefitiaries']">Assets & Benefitiaries</a></li>
+          <!-- <li><a [routerLink]="['/contact']"></a>Contact Suport</a></li>  -->
+      </ul>
+    </div>
+</nav>
 </section>
+
 <router-outlet></router-outlet>
 
 <section> 
@@ -19,27 +35,40 @@
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              <h5 class="white-text">Asset Chain</h5>
+              <p class="grey-text text-lighten-4">Do Your Own Will Online.</p>
             </div>
             <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
+              <h5 class="white-text">Menu</h5>
               <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="footer-copyright">
           <div class="container">
-          © 2014 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          © 2018 Copyright | Asset Chain
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+            <img class="social-icon1" src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+          <img class="social-icon2" src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+        <img class="social-icon3" src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+    </a>
+    <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+      <img class="social-icon4" src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+  </a>
+  <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+    <img class="social-icon5" src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+</a>  
           </div>
         </div>
       </footer>
+
           
 </section>
 

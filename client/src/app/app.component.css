@@ -10,6 +10,27 @@ main {
 
 .page-footer{
   position: relative;
-  top:330px;
+  top:620px;
   background-color: #1b1b1b;
 }
+
+nav{
+  background-color: #d9d9d9 !important;
+}
+
+a{
+  color: black;
+}
+
+#share-buttons img {
+  width:35px;
+  padding: 5px;
+  border: 0;
+  box-shadow: 0;
+  display: inline;
+  }
+
+.social-icon1, .social-icon2, .social-icon3,.social-icon4, .social-icon5{
+  float:right;
+}
+

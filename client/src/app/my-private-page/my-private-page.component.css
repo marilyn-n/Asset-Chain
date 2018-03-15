@@ -1,8 +1,25 @@
 .profile-photo{
   border-radius: 100%;
   margin-left:550px;
+  position: relative;
+  bottom:70px;
 }
 
 .profile-bg{
-background-color: #E82011;
+height: 250px;
+background-color: #1b1b1b;
+color: white;
+}
+
+
+.btn-floating.btn-large{
+  position: relative;
+  bottom:260px;
+  left: 1200px;
+}
+
+h5{
+  position: relative;
+  bottom: 100px;
+  left: 1100px;
 }

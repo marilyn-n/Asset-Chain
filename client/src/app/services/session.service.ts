@@ -34,7 +34,7 @@ export class SessionService {
   }
 
   logout() {
-    return this.http.post(`${this.base_URL}/logout`, {})
+    return this.http.post(`${this.base_URL}/logout`, {} , this.options)
       .map(res => res.json())
       .catch(err => this.handleError(err) );
   }
