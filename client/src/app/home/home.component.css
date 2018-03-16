@@ -11,8 +11,8 @@ video{
 
 .logo{
   position: relative;
-  top:110px;
-  left: 300px;
+  top:270px;
+  left: 345px;
 }
 
 button{
@@ -35,3 +35,33 @@ span{
   padding: 5px;
 }
 
+.waves-effect{
+  position: relative;
+  top:338px;
+  left: 600px;
+  /* padding: 29px; */
+  background-color: #1b1b1b;
+
+}
+
+.get-started-btn{
+  width: 240px;
+  height: 60px;
+  color: white;
+  position: relative;
+  top: 330px;
+  left: 640px;
+}
+
+.search-btn{
+  width: 240px;
+  background-color: white;
+  border-color:white !important;
+  position: relative;
+  top: 387px;
+  left: 396px;
+}
+
+.search-btn > a{
+  color: black;
+}

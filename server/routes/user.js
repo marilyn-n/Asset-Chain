@@ -12,4 +12,11 @@ router.get("/private", (req, res) => {
   return res.status(403).json({ message: "Unauthorized" });
 });
 
+router.patch =(req, res, next)=>{
+  User.findByIdAndUpdate(req.body.username)
+  .then(item=>res.status(200).json(item))
+  .catch(e=>res.status(500).send(e));
+
+}
+
 module.exports = router;
