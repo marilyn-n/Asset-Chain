@@ -20,6 +20,7 @@ import { PaymentMethodComponent } from './payment-method/payment-method.componen
 import { routes } from './routes/app.routing';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HomeComponent } from './home/home.component';
     TestamentComponent,
     AssetComponent,
     PaymentMethodComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

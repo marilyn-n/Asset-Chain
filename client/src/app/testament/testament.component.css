@@ -9,13 +9,14 @@
   height: 250px;
   background-color:  #1b1b1b;
   color: white;
+  /* padding: 22em; */
 }
 
 h1{
   margin: 0;
 }
 
-.row{
+/* .row{
   position: relative;
   bottom: 30px;
   width: 900px;
@@ -24,4 +25,4 @@ h1{
 }
 .row .col{
   padding: 0;
-}
+} */

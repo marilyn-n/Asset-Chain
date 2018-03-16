@@ -1,0 +1,28 @@
+<section id="main">
+
+    <nav>
+        <div class="nav-wrapper">
+          <img src="assets/ac-logo.png" alt="" width="170px;"><a href="assets/ac-logo.png" class="brand-logo"></a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+              <li><a [routerLink]="['/']">Home</a></li>
+              <!-- <li><a [routerLink]="['/login']">Sign In</a></li>
+              <li><a [routerLink]="['/signup']">Sign Up</a></li> -->
+              <li><a href (click)="logout()">Sign Out</a></li>
+              <li><a [routerLink]="['/add-document']">Add Document</a></li>
+              <!-- <li><a [routerLink]="['/payment-method']">Payment Method</a></li>
+              <li><a [routerLink]="['/assets/benefitiaries']">Assets & Benefitiaries</a></li> -->
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+              <li><a [routerLink]="['/']">Home</a></li>
+              <li><a [routerLink]="['/login']">Sign In</a></li>
+              <li><a [routerLink]="['/signup']">Sign Up</a></li>
+              <li><a href (click)="logout()">Sign Out</a></li>
+              <li><a [routerLink]="['/add-document']">Add Document</a></li>
+              <li><a [routerLink]="['/payment-method']">Payment Method</a></li>
+              <li><a [routerLink]="['/assets/benefitiaries']">Assets & Benefitiaries</a></li>
+              <!-- <li><a [routerLink]="['/contact']"></a>Contact Suport</a></li>  -->
+          </ul>
+        </div>
+    </nav>
+    </section>
