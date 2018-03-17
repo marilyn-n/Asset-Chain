@@ -1,3 +1,7 @@
+body{
+  background-color: rosybrown !important;
+}
+
 form{
   padding: 0 25em;
 }
@@ -18,4 +22,13 @@ position: absolute;
     height: 100%;
     font-size: 24px;
     width: 100%;
+}
+
+.card-signup{
+  background-color: skyblue;
+
+}
+
+label, input{
+  color:black;
 }

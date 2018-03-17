@@ -1,13 +1,16 @@
+<body>
+    
 <form (ngSubmit)="sendSignupForm(myForm)" #myForm="ngForm">
-  <h2> Signup </h2>
-  <div class="image-upload">
+   <h2> Signup in seconds...</h2>
+ <!-- <div class="image-upload">
       <label for="file-input">
           <img src="https://cdn2.iconfinder.com/data/icons/picons-basic-2/57/basic2-200_camera_import_images_photos-256.png" width="100px;"/>
       </label>
   <a class="btn-floating btn-large waves-effect waves-light red"><input id="file-input" type="file"/><i class="material-icons">add</i></a>
       
-  </div>
+  </div>  -->
   <br>
+  <div class="card-signup"> 
   <label> First Name </label>
   <input placeholder="First Name" type="text" [(ngModel)]="username" name="username"/>
   <label> Last Name </label>
@@ -23,8 +26,10 @@
   <button class="btn waves-effect waves-light" type="submit" name="action">Create Account
         <i class="material-icons right">send</i>
       </button>
+    </div>
       <p>Already have an account? <a [routerLink]="['/login']">Sign In</a>
       </p>
 </form>
+</body>
 <p class="error"> {{ error }} </p>
 

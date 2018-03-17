@@ -1,3 +1,28 @@
+body{
+  background-color: #e9faff !important;
+}
+
 .login-form{
   padding: 0 30em;
+}
+
+.card-signin{
+  background-color: white;
+  margin-top: 10em;
+  border-radius: 3%;
+
+}
+
+label{
+  color: black;
+}
+
+h2{
+  background-color: #4272d7;
+  color:white;
+  font-size: 38px;
+}
+
+.waves-effect{
+  background-color: #4272d7;
 }

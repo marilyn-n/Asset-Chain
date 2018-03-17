@@ -1,12 +1,10 @@
 
-
 video{
   position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
   width: 1280px;
- 
 }
 
 .logo{
@@ -39,10 +37,9 @@ span{
   position: relative;
   top:338px;
   left: 600px;
-  /* padding: 29px; */
+  padding: 29px; 
   background-color: #1b1b1b;
-
-}
+} 
 
 .get-started-btn{
   width: 240px;
