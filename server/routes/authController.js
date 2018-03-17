@@ -5,7 +5,10 @@ const User           = require("../models/User");
 const bcrypt         = require("bcrypt");
 const bcryptSalt     = 19;
 
-authController.post("/signup", (req, res, next) => {
+const multer = require("multer");
+const upload = multer ({dest: "./public/uploads"})
+
+authController.post("/signup", upload.single("file"), (req, res) => {
   if (!req.body.username || !req.body.lastName  || !req.body.email || !req.body.password) {
     res.status(400).json({ message: "Please provide all the fields to sign up" });
   }
@@ -23,7 +26,7 @@ authController.post("/signup", (req, res, next) => {
       lastName: req.body.lastName,
       email:req.body.email,
       password: hashPass,
-      
+      picPath: `/uploads/${req.file.filename}`
     });
 
     console.log(newUser);

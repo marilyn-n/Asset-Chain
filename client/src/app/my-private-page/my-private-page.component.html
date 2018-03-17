@@ -2,17 +2,16 @@
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
     <li><a href="#!">My Profile</a></li>
-    <li><a href="#!">My Assets</a></li>
-    <li class="divider"></li>
+      <li><a href="#!">My Assets</a></li>
+      <li class="divider"></li>
     <li><a href="#!">Sing Out</a></li>
   </ul>
-          
-<div class="profile-bg"> 
-  
-</div>
-<img class="profile-photo"src="http://assets3.mi-web.org/entradas/0010/3581/flores-2.jpg?1341192365" alt="" width="100px">
-<h5>{{username}}</h5>
-<p>My Docs</p>
-
-<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">create</i></a>
+  <div class="profile-bg"></div>
+   <img class="profile-photo"src="http://assets3.mi-web.org/entradas/0010/3581/flores-2.jpg?1341192365" alt="" width="100px">
+    <section> 
+   <h3 *ngIf="!showEdit" (click)="showInput()" >{{username}}</h3>
+ </section>
+   <p>My Docs</p>
+    <a href="/add-document" class="waves-effect waves-light btn">Start Writing</a>
+     <a (click)="editProfile()" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">create</i></a>
 

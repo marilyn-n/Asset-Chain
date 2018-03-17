@@ -3,6 +3,7 @@
   margin-left:550px;
   position: relative;
   bottom:70px;
+  border: gray solid 3px;
 }
 
 .profile-bg{
@@ -15,11 +16,19 @@ color: white;
 .btn-floating.btn-large{
   position: relative;
   bottom:260px;
-  left: 1200px;
+  left: 1000px;
 }
 
 h5{
   position: relative;
   bottom: 100px;
   left: 1100px;
+}
+
+
+.waves-effect{
+  position: relative;
+  bottom: 250px;
+  left:950px;
+
 }

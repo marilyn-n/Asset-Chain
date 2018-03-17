@@ -2,8 +2,6 @@ const express = require('express');
 const router  = express.Router();
 //Ensure user is logged in
 // const ensureLoggedIn = require('connect-ensure-login');
-const multer  = require('multer');
-const upload  = multer({ dest: './public/uploads' });
 const User    = require("../models/User.js");
 const Testament    = require("../models/Testament.js");
 const Asset = require ("../models/Asset.js")

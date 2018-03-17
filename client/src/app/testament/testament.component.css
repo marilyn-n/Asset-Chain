@@ -8,21 +8,25 @@
 .bg-testament{
   height: 250px;
   background-color:  #1b1b1b;
-  color: white;
-  /* padding: 22em; */
+  color: black;
+  padding: 0 16em;
+  position: relative;
+}
+
+label{
+  color:black;
 }
 
 h1{
   margin: 0;
+  color: white;
 }
-
-/* .row{
-  position: relative;
-  bottom: 30px;
-  width: 900px;
+.card-testament{
   background-color: white;
+  position: relative;
+  top:100px;
+  border-radius: .9%;
+  padding-top: 100px;
 
 }
-.row .col{
-  padding: 0;
-} */
+

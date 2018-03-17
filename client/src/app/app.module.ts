@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { FileSelectDirective } from 'ng2-file-upload';
 // services
 import { SessionService } from './services/session.service';
 import { TestamentService } from './services/testament.service';
@@ -21,6 +22,7 @@ import { routes } from './routes/app.routing';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddPhotoComponent } from './add-photo/add-photo.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     AssetComponent,
     PaymentMethodComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    FileSelectDirective,
+    AddPhotoComponent
   ],
   imports: [
     BrowserModule,

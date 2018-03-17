@@ -6,7 +6,7 @@ const userSchema = new Schema({
   lastName: String,
   email: String,
   password: String,
-  photo: String,
+  picPath: String,
   docs:[{
     type:Schema.Types.ObjectId,
     ref:"Testament"

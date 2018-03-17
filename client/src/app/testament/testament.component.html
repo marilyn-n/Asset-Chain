@@ -1,14 +1,17 @@
 <app-navbar></app-navbar>
+
 <form class="bg-testament" (ngSubmit)="submitForm(testamentForm)" #testamentForm="ngForm"> 
   <div class="testament-form">        
-  <h1>My Will</h1>
-          <label>Last Will and Testament of:</label>
+   <h1>My Will</h1>
+   <div class="card-testament">
+       <label>Last Will and Testament of:</label>
           <input type="text" [(ngModel)]="author" name="author"/>
-          <br>
+            <br>
           <label> Start Writing</label>
           <input type="text" [(ngModel)]="description" name="description"/>
-            <button type="submit">Save and Continue</button>
-          </div>
-          </form>
-        
+       <button type="submit">Save and Continue</button>
+    </div>
+  </div>
+</form>
+   
         <p class="error"> {{ error }} </p>   
