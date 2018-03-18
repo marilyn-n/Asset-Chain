@@ -1,5 +1,5 @@
 body{
-  background-color: rosybrown !important;
+  background-color: white !important;
 }
 
 form{
@@ -25,10 +25,27 @@ position: absolute;
 }
 
 .card-signup{
-  background-color: skyblue;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3%;
+  padding: 20px 20px;
 
+}
+
+h2{
+  font-size: 40px;
+  text-align: center;
 }
 
 label, input{
   color:black;
+}
+
+.waves-effect{
+  background-color: #4272d7;
+  padding: 0 160px;
+}
+
+p{
+  margin-left: 150px;
 }

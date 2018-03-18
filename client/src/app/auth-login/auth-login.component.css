@@ -1,5 +1,4 @@
 body{
-  background-color: #e9faff !important;
 }
 
 .login-form{
@@ -10,6 +9,8 @@ body{
   background-color: white;
   margin-top: 10em;
   border-radius: 3%;
+  border: 1px solid black;
+  padding: 20px;
 
 }
 
@@ -18,11 +19,13 @@ label{
 }
 
 h2{
-  background-color: #4272d7;
-  color:white;
+  color:black;
   font-size: 38px;
+  position: relative;
+  left:107px;
 }
 
 .waves-effect{
   background-color: #4272d7;
+  padding: 0 140px;
 }

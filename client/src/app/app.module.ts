@@ -23,6 +23,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddPhotoComponent } from './add-photo/add-photo.component';
+import { StripeFormComponent } from './stripe-form/stripe-form.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AddPhotoComponent } from './add-photo/add-photo.component';
     HomeComponent,
     NavbarComponent,
     FileSelectDirective,
-    AddPhotoComponent
+    AddPhotoComponent,
+    StripeFormComponent
   ],
   imports: [
     BrowserModule,

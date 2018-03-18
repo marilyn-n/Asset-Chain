@@ -7,22 +7,22 @@ const upload = multer ({dest:"./public/upload"})
 router.post('/createAsset/:idTestament',(req, res, next) =>{
 
 
-  // const listAsset = [];
+  const listAsset = [];
 
-  // for(i = 0; i < req.body.title.length; i++) {
-  //   listAsset.push({
-  //     title: req.body.title[i], 
-  //     emailTo: req.body.emailTo[i],
-  //     description: req.body.description[i],
-  //     idTestament: req.params.idTestament,
-  //     docs: [i]
-  //   });
-  // }
-  // console.log(listAsset)
-  // Asset.create(listAsset, (err, result) => {
-  //   if(err){res.status(400).json(err)}
-  //   res.status(200).json(result)
-  // })
+  for(i = 0; i < req.body.title.length; i++) {
+    listAsset.push({
+      title: req.body.title[i], 
+      emailTo: req.body.emailTo[i],
+      description: req.body.description[i],
+      idTestament: req.params.idTestament,
+      docs: [i]
+    });
+  }
+  console.log(listAsset)
+  Asset.create(listAsset, (err, result) => {
+    if(err){res.status(400).json(err)}
+    res.status(200).json(result)
+  })
 });
 // =============================================================CRUD
 router.deleteAsset = (req,res,next)=>{
