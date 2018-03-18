@@ -1,17 +1,17 @@
 <app-navbar></app-navbar>
-<!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">My Profile</a></li>
-      <li><a href="#!">My Assets</a></li>
-      <li class="divider"></li>
-    <li><a href="#!">Sing Out</a></li>
-  </ul>
-  <div class="profile-bg"></div>
-   <img class="profile-photo"src="http://assets3.mi-web.org/entradas/0010/3581/flores-2.jpg?1341192365" alt="" width="100px">
-    <section> 
-   <h3 *ngIf="!showEdit" (click)="showInput()" >{{username}}</h3>
- </section>
-   <p>My Docs</p>
-    <a href="/add-document" class="waves-effect waves-light btn">Start Writing</a>
-     <a (click)="editProfile()" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">create</i></a>
+<section> 
+<div class="card-profile"> 
+<img src="https://www.gcit.edu.bt/wp-content/plugins/awsm-team-pro/images/default-user.png" alt="">
+<h2>{{username}}</h2>
+<p> <b> About me:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempore qui quae, unde, <br>
+   recusandae ab placeat, debitis facilis explicabo reiciendis modi molestiae quas expedita. Dicta quos <br> 
+   laboriosam iusto aliquid voluptates.</p>
+<p><b>My Documents</b></p>
+<div class="files"><a href="#">House</a></div>
+<div class="files"><a href="#">Testament</a></div>
+<div class="files"><a href="#">Car</a></div>
+<a href="/add-document" class="waves-effect waves-light btn">Start Writing</a>
+<a (click)="editProfile()" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">create</i></a>
+</div>
+</section>
 

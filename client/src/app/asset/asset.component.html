@@ -10,9 +10,8 @@
   <input type="text" name="beneficiaryName">
   <label> Beneficiary Email</label>
   <input type="text" name="emailTo" [(ngModel)]="emailTo" required/>
-
-  <button (click)="addAsset()" type="submit"> add </button>
-</form>
+  <a (click)="addAsset()" type="submit" class="btn btn-floating btn-large pulse"><i class="material-icons">add</i></a>
+ </form>
 
 <div *ngIf="hasAssets">
   <ul *ngFor="let asset of assets">
@@ -22,4 +21,5 @@
     <li>asset.emailTo</li>
 
   </ul>
+
 </div>

@@ -1,0 +1,28 @@
+.waves-effect{
+  position: relative;
+  left: 400px;
+  top: 200px;
+
+}
+
+p{
+  position: relative;
+  left: 490px;
+  top: 300px;
+}
+
+h4{
+  text-align: center;
+  /* margin-left: 200px; */
+}
+
+h3{
+  padding-top: 2em;
+  position: relative;
+  left: 500px;
+}
+button{
+  position: relative;
+  top: 100px;
+  left: 550px;
+}

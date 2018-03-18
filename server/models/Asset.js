@@ -7,12 +7,12 @@ const assetSchema = new Schema({
   emailTo: {type: String},
   description: {type: String},
   docs: [{type:String}]
-}, {
+  }, {
   timestamps: {
     createdAt: "created_at",
     updatedAt: "updated_at"
   },
-});
+  });
 
 
 const Asset = mongoose.model("Asset", assetSchema);

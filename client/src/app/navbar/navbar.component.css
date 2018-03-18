@@ -1,3 +1,7 @@
 nav .nav-wrapper{
-  background-color: #bcbfc5;
+  background-color: black;
+}
+
+.photo-profile{
+  margin-top:10px;
 }

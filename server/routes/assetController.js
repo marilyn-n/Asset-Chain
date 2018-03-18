@@ -6,7 +6,6 @@ const upload = multer ({dest:"./public/upload"})
 
 router.post('/createAsset/:idTestament',(req, res, next) =>{
 
-
   const listAsset = [];
 
   for(i = 0; i < req.body.title.length; i++) {

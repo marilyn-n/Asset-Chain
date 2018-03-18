@@ -1,15 +1,28 @@
 const express = require('express');
 const router  = express.Router();
-//Ensure user is logged in
-// const ensureLoggedIn = require('connect-ensure-login');
 const User    = require("../models/User.js");
 const Testament    = require("../models/Testament.js");
 const Asset = require ("../models/Asset.js")
+const EmailService = require('./EmailService')
 
 router.get('/all', (req,res,next)=> {
   Testament.find()
     .then(allTestaments => res.status(200).json(allTestaments))
 })
+
+// show testament 
+
+// edit testament
+
+// send testament on death with blockchain methods
+
+EmailService.sendText(email, 'Welcome!', 'Do something great!')
+  .then(() => {
+    // Email sent successfully
+  })
+  .catch(() => {
+    // Error sending email
+  })
 
 
 router.post('/new', (req, res, next) =>{
@@ -39,8 +52,6 @@ router.get('/testament-details', (req, res, next) => {
       })
   })
 })
-
-
 
 router.post('/assets/benefitiaries', (req, res) =>{
   return res.status(403).json({ message: "choose benefitiaries and add assets" });

@@ -1,13 +1,15 @@
-.demo-ribbon {
-  width: 100%;
-  height: 40vh;
-  background-color: #3F51B5;
-  flex-shrink: 0;
+body{
+  margin-top: 3em;
+
+}
+
+hr{
+  border: 1px solid #E82011;
 }
 
 .bg-testament{
   height: 250px;
-  background-color:  #4272d7;
+  /* background-color:  #4272d7; */
   color: black;
   padding: 0 16em;
   position: relative;
@@ -19,14 +21,22 @@ label{
 
 h1{
   margin: 0;
-  color: white;
+  color: black;
 }
 .card-testament{
   background-color: white;
   position: relative;
-  top:100px;
+  top:0px;
   border-radius: .9%;
-  padding-top: 100px;
-
+  padding: 1em;;
+  border: 1px solid black;
+  height: 500px;
+  margin-top: 2em;
 }
 
+.btn{
+  background-color: #4272d7;
+  margin-top: 2em;
+  margin-left:250px;
+  margin-bottom: 2em;
+}

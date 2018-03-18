@@ -13,22 +13,49 @@ color: white;
 }
 
 
-.btn-floating.btn-large{
-  position: relative;
-  bottom:260px;
-  left: 1000px;
+/* ======================================= */
+.card-profile{
+  border-top: 1px solid gray;
+  padding: 0 5em 0;
+  padding-top:5em;
+
 }
 
-h5{
+h2{
   position: relative;
-  bottom: 100px;
-  left: 1100px;
+  bottom: 300px;
+  left: 400px;
 }
 
+p{
+  position: relative;
+  bottom: 300px;
+  left: 400px;
+
+}
 
 .waves-effect{
   position: relative;
-  bottom: 250px;
-  left:950px;
+  bottom: 200px;
+  left:400px;
+  background-color: #4272d7;
 
 }
+
+.btn-floating.btn-large{
+  position: relative;
+  bottom:500px;
+  left: 550px;
+ 
+}
+.files{
+  position: relative;
+  right: 380px;
+  bottom: 300px;
+  padding: 20px;
+  margin:10px;
+  width: 100px;
+  background-color: rgb(145, 180, 201);
+  float: right;
+}
+
