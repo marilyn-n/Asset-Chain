@@ -11,7 +11,7 @@ const assetController = require('./routes/assetController')
 const session        = require("express-session");
 const passport       = require("passport");
 const app            = express();
-
+const EmailService = require('./models/EmailService.js');
 
 // Mongoose configuration
 const mongoose = require("mongoose");

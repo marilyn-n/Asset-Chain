@@ -1,5 +1,8 @@
-const nodemailer = require('nodemailer')
-const mailgunTransport = require('nodemailer-mailgun-transport')
+const nodemailer = require('nodemailer');
+const mailgunTransport = require('nodemailer-mailgun-transport');
+const mongoose = require("mongoose");
+const Schema   = mongoose.Schema;
+
 // Configure transport options
 const mailgunOptions = {
   auth: {
@@ -7,11 +10,11 @@ const mailgunOptions = {
     domain: "sandboxbbededb03b394ead8292c4fa55a18b12.mailgun.org",
   }
 }
-const transport = mailgunTransport(mailgunOptions)
+const transport = mailgunTransport(mailgunOptions);
 // EmailService
 class EmailService {
   constructor() {
-    this.emailClient = nodemailer.createTransport(transport)
+    this.emailClient = nodemailer.createTransport(transport);
   }
   sendText(to, subject, text) {
     return new Promise((resolve, reject) => {
@@ -30,4 +33,4 @@ class EmailService {
     })
   }
 }
-module.exports = new EmailService()
+module.exports = new EmailService();

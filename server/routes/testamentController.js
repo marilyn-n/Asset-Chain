@@ -3,7 +3,7 @@ const router  = express.Router();
 const User    = require("../models/User.js");
 const Testament    = require("../models/Testament.js");
 const Asset = require ("../models/Asset.js")
-const EmailService = require('./EmailService')
+const EmailService = require('../models/EmailService')
 
 router.get('/all', (req,res,next)=> {
   Testament.find()
@@ -16,20 +16,14 @@ router.get('/all', (req,res,next)=> {
 
 // send testament on death with blockchain methods
 
-EmailService.sendText(email, 'Welcome!', 'Do something great!')
-  .then(() => {
-    // Email sent successfully
-  })
-  .catch(() => {
-    // Error sending email
-  })
-
 
 router.post('/new', (req, res, next) =>{
   console.log(req.user)
     const myTestament = new Testament({
      owner: req.user._id,
-     description: req.body.description
+     description: req.body.description,
+     executorEmail: req.body.executorEmail,
+     assetId: req.body.assetId,
    });
    myTestament.save()
     .then(result =>res.status(200).json(result))
