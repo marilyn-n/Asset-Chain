@@ -1,25 +1,42 @@
 <app-navbar></app-navbar>
-<form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+<h2>Create Asset and Add your Benefitiary</h2>
+
+<div class="wrapped-form"> 
+<form class="assetForm" (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
   <h2>Asset Details</h2>
   <label for="">Asset Name</label>
   <input type="text" name="assetName">
-  <label for="">Upload File</label>
-  <input type="file" name="docs" [(ngModel)]="file" required />
+  <div class="file-field input-field">  
+      <div class="btn">
+        <span>Upload File</span>
+        <input type="file"name="files" [(ngModel)]="files" required />
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
   <br>
   <label for="">Beneficiary Name</label>
-  <input type="text" name="beneficiaryName">
+  <input type="text" name="beneficiaryName"[(ngModel)]="beneficiaryName"/>
   <label> Beneficiary Email</label>
-  <input type="text" name="emailTo" [(ngModel)]="emailTo" required/>
+  <input type="text" name="beneficiaryEmail" [(ngModel)]="beneficiaryEmail" required/>
+  <br>
+  <label for="">Description</label>
+  <input type="text" [(ngModel)]="description" name="description">
   <a (click)="addAsset()" type="submit" class="btn btn-floating btn-large pulse"><i class="material-icons">add</i></a>
+
  </form>
+</div>
 
 <div *ngIf="hasAssets">
   <ul *ngFor="let asset of assets">
-    <li>{{asset.name}}</li>
-    <li><a href="">{{asset.docs}}</a></li>
+    <li>{{asset.assetName}}</li>
+    <li><a href="#">{{asset.files}}</a></li>
     <li>{{asset.beneficiaryName}}</li>
-    <li>asset.emailTo</li>
+    <li>{{asset.beneficiaryEmail}}</li>
 
   </ul>
 
 </div>
+
+<!-- toast added -->

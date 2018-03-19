@@ -3,17 +3,19 @@ const Schema   = mongoose.Schema;
 
 const assetDetails = {
   userId:String,
-  name: String,
-  assetType: String,
+  assetName:{type: String},
+  assetType: {type: String},
   beneficiaryName: {type: String},
   beneficiaryEmail: {type: String},
   description: {type: String},
-  files: [{type:Buffer}]
+  files: [{type:Buffer}],
+  idTestament:{type: String}
 }
 
 const assetSchema = new Schema(assetDetails,
     { timestamps: 
-      { createdAt: 'created_at' ,
+      {
+       createdAt: 'created_at' ,
        updatedAt: 'updated_at' }
 })
 

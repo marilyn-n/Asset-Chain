@@ -19,5 +19,7 @@ export const routes: Routes = [
     {path: 'add-document', component: TestamentComponent},
     {path: 'assets/benefitiaries', component: AssetComponent},
     {path: 'addPhoto', component: AddPhotoComponent},
-    {path: 'payment-method', component: PaymentMethodComponent}
+    {path: 'payment-method', component: PaymentMethodComponent},
+    {path: 'testament-details/:id', component: TestamentComponent} 
+    //do i need to create a new component for testament details?
 ];

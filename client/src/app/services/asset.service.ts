@@ -6,10 +6,28 @@ import { Http, Response} from '@angular/http';
 
 @Injectable()
 export class AssetService {
-  @Output() removeAsset = new EventEmitter<any>();
+  base_URL= 'http://localhost:3000/';
+  options= { withCredentials: true};
+  // @Output() removeAsset = new EventEmitter<any>();
   constructor(private http: Http) { }
+  handleError(e) {
+    return Observable.throw(e.json().message);
+  }
+  addAsset(myForm) {
+    return this.http.post(`${this.base_URL}/asset/benefitiarie`, myForm, this.options)
+      .map(res => res.json())
+      .catch(err => this.handleError(err));
+  }
 
+  getAllAsset() {
+    return this.http.get('http://localhost:3000/api/asset/')
+      .map(res => res.json());
+  }
 
+  postNewAsset(asset): Observable<any> {
+    return this.http.post('http://localhost:3000/api/asset/new', asset, this.options)
+      .map(res => res.json())
+      .catch(err => this.handleError(err));  }
 
 
 }

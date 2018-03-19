@@ -18,7 +18,7 @@ export class TestamentService {
       .map(res => res.json());
   }
 
-  postNewTestament(testament):Observable<any> {
+  postNewTestament(testament): Observable<any> {
     return this.http.post('http://localhost:3000/api/testament/new', testament, this.options)
       .map(res => res.json())
       .catch(err => this.handleError(err));  }

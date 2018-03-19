@@ -15,8 +15,6 @@ router.get('/all', (req,res,next)=> {
 // edit testament
 
 // send testament on death with blockchain methods
-
-
 router.post('/new', (req, res, next) =>{
   console.log(req.user)
     const myTestament = new Testament({
@@ -24,6 +22,9 @@ router.post('/new', (req, res, next) =>{
      description: req.body.description,
      executorEmail: req.body.executorEmail,
      assetId: req.body.assetId,
+     password: req.body.password,
+     BlockchainSecret: req.body.BlockchainSecret,
+     BlockchainIndex: req.body.BlockchainIndex
    });
    myTestament.save()
     .then(result =>res.status(200).json(result))
@@ -47,9 +48,6 @@ router.get('/testament-details', (req, res, next) => {
   })
 })
 
-router.post('/assets/benefitiaries', (req, res) =>{
-  return res.status(403).json({ message: "choose benefitiaries and add assets" });
-});
 
 router.post('/payment-method',(req, res) => {
   return res.status(403).json({ message: "payment method whaaat" });
