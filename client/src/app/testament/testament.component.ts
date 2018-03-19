@@ -16,7 +16,7 @@ export class TestamentComponent implements OnInit {
   submitForm(newForm) {
     console.log(newForm.value);
    this.testamentS.postNewTestament(newForm.value)
-    .subscribe(() => this.router.navigate(['/assets/benefitiaries']));
+    .subscribe( testamentCreated => this.router.navigate(['/assets/benefitiaries', testamentCreated._id]));
   }
 
 }

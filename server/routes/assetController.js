@@ -3,29 +3,27 @@ const router  = express.Router();
 const Asset = require("../models/Asset.js");
 const multer = require('multer');
 const Testament    = require("../models/Testament.js");
-const upload = multer ({dest:"./public/upload"})
+const upload = multer ({dest:"./public/uploads"})
 
 router.post('/assets/benefitiaries', (req, res) =>{
   return res.status(403).json({ message: "choose benefitiaries and add assets" });
 });
 
-router.post('/createAsset/:idTestament',(req, res, next) =>{
-  const arrayAsset = [];
-  for(i = 0; i < req.body.assetName.length; i++) {
-    arrayAsset.push({
-    assetName: req.body.assetName[i], 
-    files: req.body.files[i],
-    beneficiaryName: req.body.beneficiaryName[i],
-    beneficiaryEmail: req.body.beneficiaryEmail[i],
-    description: req.body.description[i],
-    idTestament: req.params.idTestament[i]
-    });
-  }
-  console.log(arrayAsset)
-  Asset.create(arrayAsset, (err, result) => {
-    if(err){res.status(400).json(err)}
-    res.status(200).json(result)
+router.post('/createAsset/:idTestament',upload.single("file"),(req, res, next) =>{
+  
+  const newAsset = new Asset ({
+    assetName: req.body.assetName,
+    beneficiaryName: req.body.beneficiaryName,
+    beneficiaryEmail: req.body.beneficiaryEmail,
+    description: req.body.description,
+    idTestament:req.params.idTestament,
+    file: `/uploads/${req.file.filename}`
   })
+console.log("entrar al post de crear")
+  newAsset.save()
+    .then(respuesta => res.status(200).json(respuesta))
+    .catch(err => res.status(400).json(err))
+  
 });
 
 // =============================================================CRUD

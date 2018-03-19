@@ -8,8 +8,8 @@ const assetDetails = {
   beneficiaryName: {type: String},
   beneficiaryEmail: {type: String},
   description: {type: String},
-  files: [{type:Buffer}],
-  idTestament:{type: String}
+  file: {type:String},
+  idTestament:{type: Schema.Types.ObjectId, ref: 'Testament'}
 }
 
 const assetSchema = new Schema(assetDetails,
