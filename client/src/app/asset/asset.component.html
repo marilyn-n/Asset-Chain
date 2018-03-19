@@ -1,58 +1,71 @@
 <app-navbar></app-navbar>
-
-<p>If I dont ckeck my account every</p> <div class="input-field col s12">
+<div class="card-reminder"> 
+<p>Remind me via email to chek my account every</p>
+<div class="input-field col s12">
   <select>
-    <option value="" disabled selected>Choose your option</option>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
+    <option value="" selected>Choose your option</option>
+    <option value="1">Every month</option>
+    <option value="2">Every 3 months</option>
+    <option value="3">Every 1 year</option>
+    <option value="3">Every 2 years</option>
   </select>
-  <label>Materialize Select</label>
-</div> 
-<p>
-  <input type="checkbox" id="test5" />
-  <label for="test5">Accept</label>
-</p>
-
-<h2>Create Asset and Add your Benefitiary</h2>
-
-<div class="wrapped-form"> 
-<form class="assetForm" (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
-  <h2>Asset Details</h2>
-  <label for="">Asset Name</label>
-  <input type="text" name="assetName" [(ngModel)]="assetName" >
-  <div class="file-field input-field">  
+</div>
+</div>
+<br>
+<br>
+<div class="wrapped-form">
+  <form class="assetForm" (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+      <h2>Create Asset and Add your Benefitiary</h2>
+    <label for="">Asset Name</label>
+    <input type="text" name="assetName" [(ngModel)]="assetName">
+    <div class="file-field input-field">
       <div class="btn">
         <span>Upload File</span>
-        <input type="file" name="file" ng2FileSelect [uploader]="uploader" />      
+        <input type="file" name="file" ng2FileSelect [uploader]="uploader" />
       </div>
       <div class="file-path-wrapper">
         <input class="file-path validate" type="text">
       </div>
-  </div>
-  <br>
-  <label for="">Beneficiary Name</label>
-  <input type="text" name="beneficiaryName"[(ngModel)]="beneficiaryName"/>
-  <label> Beneficiary Email</label>
-  <input type="text" name="beneficiaryEmail" [(ngModel)]="beneficiaryEmail" required/>
-  <br>
-  <label for="">Description</label>
-  <input type="text" [(ngModel)]="description" name="description">
-
-  <button type="submit">Puchame</button>
-
- </form>
+    </div>
+    <br>
+    <label for="">Beneficiary Name</label>
+    <input type="text" name="beneficiaryName" [(ngModel)]="beneficiaryName" />
+    <label> Beneficiary Email</label>
+    <input type="text" name="beneficiaryEmail" [(ngModel)]="beneficiaryEmail" required/>
+    <br>
+    <label for="">Description</label>
+    <input type="text" [(ngModel)]="description" name="description">
+    <button type="submit">Add</button>
+  </form>
 </div>
 
-<div *ngIf="hasAssets">
-  <ul *ngFor="let asset of assets">
-    <li>{{asset.assetName}}</li>
-    <li><a href="#">{{asset.files}}</a></li>
-    <li>{{asset.beneficiaryName}}</li>
-    <li>{{asset.beneficiaryEmail}}</li>
+<button (click)="nextStep()" type="submit">Next Step</button>
 
+<div class="wrapper"> 
+    <ul *ngFor="let asset of assets" class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header col s2"><i class="material-icons">assignment</i>Asset Details</div>
+      <div class="collapsible-body">
+          <span>Asset Name:</span>
+          {{asset.assetName}}
+          <br>
+          <span>Beneficiary:</span>
+          {{asset.beneficiaryName}}
+          <br>
+          <span>Beneficiary Contact:</span>
+          {{asset.beneficiaryEmail}}
+          <br>
+          {{asset.assetEmail}}
+          <span>Asset:</span>
+          <a href="{{asset.file}}">{{asset.file}}</a> 
+          <br>
+          <span>Short Description:</span>
+          {{asset.description}}
+      </div>
+    </li>
   </ul>
 
-</div>
-
-<!-- toast added -->
+<!-- <p>
+  <input type="checkbox" id="test5" />
+  <label for="test5">Accept</label>
+</p> -->

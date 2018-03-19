@@ -26,23 +26,17 @@ console.log("entrar al post de crear")
   
 });
 
+router.get('/', (req,res)=>{
+  Asset.find()
+  .then(assets => res.status(200).json(assets))
+  .catch(err => res.status(400).json(err));
+});
+
 // =============================================================CRUD
-router.putAsset = (req,res, next) =>{
-
-}
-
-router.deleteAsset = (req,res,next) => {
-  Asset.findByIdAndRemove(req.params.id)
-  .then(lists=>res.status(200).json(lists))
-  .catch(e=>res.status(500).send(e));
-}
-
-
-exports.patchAsset = (req,res,next) => {
-  Asset.findByIdAndUpdate(req.params.id, req.body, {new:true})
-  .then(list=>res.status(200).json(list))
-  .catch(e=>res.status(500).send(e));
-}
+// router.get('/', controller.getCards);
+// router.post('/', controller.postCard);
+// router.patch('/:id', controller.patchCard);
+// router.delete('/:id', controller.deleteCard);
 
 
 

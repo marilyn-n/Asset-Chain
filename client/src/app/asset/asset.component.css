@@ -1,9 +1,38 @@
-.wrapped-form{
-  margin: 2em 32em;
+.card-reminder{
   position: relative;
-  right: 450px;
-  border: 5px solid black;
-  padding: 1em;
+  top: 190px;
+  width: 350px;
+  left: 70px;
+  box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  border: 1px solid #ddd;
+  padding: 20px;
+
+}
+
+.collapsible{
+  width: 300px;
+}
+
+.wrapper{
+  position: relative;
+  left: 900px;
+  bottom: 730px;
+}
+
+.input-field{
+ width: 300px;
+
+}
+
+.wrapped-form{
+  position: relative;
+  margin: 2em 32em;
+  left: 20px;
+  bottom:70px;
+  border: 1px solid #ddd;
+  padding: .5em;
+  box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+
  
 }
 

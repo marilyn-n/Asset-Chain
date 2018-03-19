@@ -4,7 +4,6 @@ const passport       = require("passport");
 const User           = require("../models/User");
 const bcrypt         = require("bcrypt");
 const bcryptSalt     = 19;
-
 const multer = require("multer");
 const upload = multer ({dest: "./public/uploads"})
 

@@ -19,9 +19,25 @@ export class AssetService {
       .catch(err => this.handleError(err));
   }
 
+
+  // addAsset(myForm):Observable<any>{
+  //   return this.http.post('/api/cards', myForm)
+  //   .map((res:Response)=>res.json())
+  //   .map(function(myForm){
+  //     return myForm;
+  //   })
+  //   .catch(e=>{
+  //     console.log(e);
+  //     return Observable.throw(e);
+  //   })
+  // }
+
+
+
   getAllAsset() {
     return this.http.get('http://localhost:3000/api/asset/')
-      .map(res => res.json());
+      .map(res => res.json())
+      .catch(err => this.handleError(err));  
   }
 
   postNewAsset(asset): Observable<any> {
