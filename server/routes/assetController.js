@@ -17,7 +17,7 @@ router.post('/createAsset/:idTestament',upload.single("file"),(req, res, next) =
     beneficiaryEmail: req.body.beneficiaryEmail,
     description: req.body.description,
     idTestament:req.params.idTestament,
-    file: `/uploads/${req.file.filename}`
+    file: `${req.file.filename}`
   })
 console.log("entrar al post de crear")
   newAsset.save()
@@ -31,6 +31,8 @@ router.get('/', (req,res)=>{
   .then(assets => res.status(200).json(assets))
   .catch(err => res.status(400).json(err));
 });
+
+// router.delete()
 
 // =============================================================CRUD
 // router.get('/', controller.getCards);

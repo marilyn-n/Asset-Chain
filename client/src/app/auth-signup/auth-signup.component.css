@@ -3,7 +3,7 @@ body{
 }
 
 form{
-  padding: 4em 25em;
+  padding: 4em 28em;
 }
 
 
@@ -26,7 +26,8 @@ position: absolute;
 
 .card-signup{
   background-color: white;
-  border: 5px solid black;
+  box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  border: 1px solid #ddd;
   border-radius: 3%;
   padding: 20px 20px;
 

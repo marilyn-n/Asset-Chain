@@ -45,5 +45,14 @@ export class AssetService {
       .map(res => res.json())
       .catch(err => this.handleError(err));  }
 
+      removeItem(item){
+        return this.http.delete('/api/cards/'+item._id)
+        .map((res:Response)=>res.json())
+        .map(item=>item)
+        .catch(e=>{
+          console.log(e);
+          return Observable.throw(e);
+        })
+      }
 
 }

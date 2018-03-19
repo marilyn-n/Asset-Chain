@@ -43,8 +43,8 @@
 
 <div class="wrapper"> 
     <ul *ngFor="let asset of assets" class="collapsible" data-collapsible="accordion">
-    <li>
-      <div class="collapsible-header col s2"><i class="material-icons">assignment</i>Asset Details</div>
+    <li>         
+      <div class="collapsible-header col s2"><i class="material-icons">assignment</i>{{asset.assetName}}<i (click)="deleteCard()" class="material-icons">delete_forever</i></div>
       <div class="collapsible-body">
           <span>Asset Name:</span>
           {{asset.assetName}}
@@ -63,6 +63,7 @@
           {{asset.description}}
       </div>
     </li>
+  
   </ul>
 
 <!-- <p>
