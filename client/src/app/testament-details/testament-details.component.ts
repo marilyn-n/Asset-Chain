@@ -8,17 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./testament-details.component.css']
 })
 export class TestamentDetailsComponent implements OnInit {
+  testament: any;
   constructor(private testamentS: TestamentService, private router: Router) { }
 
   ngOnInit() {
+    this.testamentS.getTestament()
+      .subscribe(myTestament => this.testament = myTestament);
   }
-
-  getTestament(){
-    this.testamentS.getAllTestament()
-    //
-    //
-  }
-
 
 
 

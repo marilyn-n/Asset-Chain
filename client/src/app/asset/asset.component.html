@@ -1,4 +1,9 @@
 <app-navbar></app-navbar>
+<hr class="one-hr">
+<h1>ASSETS AND BENEFICIARIES</h1>
+<hr>
+<p class="asset-leyend"> Your beneficiaries are the people that will receive your property. These are normally <br>
+   your spouse, children, other relatives, and close friends. <br> You can also make any special bequests regarding any digital assets you own. </p>
 <div class="card-reminder">
   <p>Remind me via email to chek my account every</p>
   <div class="input-field col s12">
@@ -35,11 +40,16 @@
     <br>
     <label for="">Description</label>
     <input type="text" [(ngModel)]="description" name="description">
-    <button type="submit">Add</button>
+    <button type="submit" class="btn waves-effect waves-light" type="submit" name="action">Add
+        <i class="material-icons right">send</i>
+      </button>
+
   </form>
 </div>
-
-<button (click)="nextStep()" type="submit">Next Step</button>
+<div class="next-step"> 
+<button (click)="nextStep()" type="submit" class="btn waves-effect waves-light" type="submit" name="action">Next Step
+  </button>
+</div>
 
 <div class="wrapper">
   <ul *ngFor="let asset of assets" class="collapsible" data-collapsible="accordion">

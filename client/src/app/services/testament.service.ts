@@ -13,8 +13,8 @@ export class TestamentService {
     return Observable.throw(e.json().message);
   }
 
-  addTestament(myForm) {
-    return this.http.post(`${this.base_URL}/api/testament-details`, myForm, this.options)
+  getTestament() {
+    return this.http.get(`${this.base_URL}/api/testament/testament-details`, this.options)
       .map(res => res.json())
       .catch(err => this.handleError(err));
   }

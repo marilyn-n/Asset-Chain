@@ -32,7 +32,7 @@ router.post('/new', (req, res, next) =>{
 
 function hackToUpdateUser(userId, testamentId){
   User.findByIdAndUpdate(userId, {testament:testamentId}, {new:true})
-  .then(res=>console.log("cheeet",res));
+  .then(res=>console.log('ok',res));
 }
 
 // show testament 

@@ -1,7 +1,13 @@
 nav .nav-wrapper{
   background-color: black;
+
 }
 
 .photo-profile{
   margin-top:10px;
+}
+
+.hide-on-med-and-down{
+  width: 250px;
+
 }

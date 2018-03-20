@@ -26,7 +26,6 @@ export class TestamentComponent implements OnInit {
       //console.log(testamentCreated);
       this.router.navigate(['/assets/benefitiaries', testamentCreated._id])
     });
-       
   }
 
 }

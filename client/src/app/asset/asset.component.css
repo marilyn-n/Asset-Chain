@@ -1,12 +1,43 @@
 .card-reminder{
   position: relative;
-  top: 190px;
+  top: 70px;
   width: 350px;
   left: 70px;
   box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
   border: 1px solid #ddd;
   padding: 20px;
 
+}
+.asset-leyend{
+  text-align: center;
+  color:rgb(128, 131, 133);
+  font-size: 25px;
+}
+
+ .next-step > .waves-effect{
+  position: relative;
+  left: 1000px;
+  background-color: #E82011;
+
+}
+
+hr{
+  border:1px solid #E82011;
+  margin-top: 40px;
+  margin-left: 150px;
+  margin-right: 150px;
+
+}
+
+h1{
+  position: relative;
+  left: 190px;
+  top: 10px;
+/* font-size: 70px; */
+}
+
+button, .btn{
+  background-color: #E82011;
 }
 
 .collapsible{
@@ -16,7 +47,7 @@
 .wrapper{
   position: relative;
   left: 900px;
-  bottom: 730px;
+  bottom: 865px;
 }
 
 .input-field{
@@ -28,7 +59,7 @@
   position: relative;
   margin: 2em 32em;
   left: 20px;
-  bottom:70px;
+  bottom:190px;
   border: 1px solid #ddd;
   padding: .5em;
   box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
