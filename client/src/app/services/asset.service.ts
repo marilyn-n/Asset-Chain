@@ -2,6 +2,7 @@ import { Injectable, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 import { Http, Response} from '@angular/http';
 
 @Injectable()
@@ -18,8 +19,6 @@ export class AssetService {
       .map(res => res.json())
       .catch(err => this.handleError(err));
   }
-
-
   // addAsset(myForm):Observable<any>{
   //   return this.http.post('/api/cards', myForm)
   //   .map((res:Response)=>res.json())
@@ -32,27 +31,24 @@ export class AssetService {
   //   })
   // }
 
-
-
   getAllAsset() {
-    return this.http.get('http://localhost:3000/api/asset/')
+    return this.http.get('http://localhost:3000/api/asset')
       .map(res => res.json())
-      .catch(err => this.handleError(err));  
+      .catch(err => this.handleError(err));
   }
 
   postNewAsset(asset): Observable<any> {
     return this.http.post('http://localhost:3000/api/asset/new', asset, this.options)
       .map(res => res.json())
-      .catch(err => this.handleError(err));  }
+      .catch(err => this.handleError(err));
+    }
 
-      removeItem(item){
-        return this.http.delete('/api/cards/'+item._id)
-        .map((res:Response)=>res.json())
-        .map(item=>item)
-        .catch(e=>{
-          console.log(e);
-          return Observable.throw(e);
-        })
-      }
-
-}
+    removeItem(item) {
+      return this.http.delete('http://localhost:3000/api/asset')
+      .map(item => item)
+      .catch(e => {
+        console.log(e);
+        return Observable.throw(e);
+      });
+    }
+  }
