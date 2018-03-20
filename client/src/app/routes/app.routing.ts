@@ -9,6 +9,8 @@ import { AssetComponent } from '../asset/asset.component';
 import { PaymentMethodComponent } from '../payment-method/payment-method.component';
 import { HomeComponent } from '../home/home.component';
 import { AddPhotoComponent } from '../add-photo/add-photo.component';
+import { TestamentDetailsComponent } from '../testament-details/testament-details.component';
+
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,6 +22,5 @@ export const routes: Routes = [
     {path: 'assets/benefitiaries/:idTestament', component: AssetComponent},
     {path: 'addPhoto', component: AddPhotoComponent},
     {path: 'payment-method', component: PaymentMethodComponent},
-    {path: 'testament-details/:id', component: TestamentComponent} 
-    //do i need to create a new component for testament details?
+    {path: 'testament-details', component: TestamentDetailsComponent}
 ];

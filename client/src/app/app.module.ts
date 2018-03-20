@@ -24,6 +24,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddPhotoComponent } from './add-photo/add-photo.component';
 import { StripeFormComponent } from './stripe-form/stripe-form.component';
+import { TestamentDetailsComponent } from './testament-details/testament-details.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { StripeFormComponent } from './stripe-form/stripe-form.component';
     NavbarComponent,
     FileSelectDirective,
     AddPhotoComponent,
-    StripeFormComponent
+    StripeFormComponent,
+    TestamentDetailsComponent
   ],
   imports: [
     BrowserModule,

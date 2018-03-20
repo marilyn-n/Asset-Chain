@@ -1,13 +1,19 @@
 .waves-effect{
   position: relative;
-  left: 400px;
-  top: 200px;
+  left: 550px;
+  top: 100px;
 
+}
+
+hr{
+  margin-left:300px;
+  margin-right: 300px;
+  border-color: #E82011;
 }
 
 p{
   position: relative;
-  left: 490px;
+  left: 525px;
   top: 300px;
 }
 
@@ -19,7 +25,7 @@ h4{
 h3{
   padding-top: 2em;
   position: relative;
-  left: 500px;
+  left: 525px;
 }
 button{
   position: relative;

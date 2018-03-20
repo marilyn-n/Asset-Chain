@@ -25,6 +25,12 @@ export class AuthSignupComponent implements OnInit {
       form.append('password', myForm.value.password);
     };
     this.uploader.uploadAll();
-    this.uploader.onCompleteItem = () => this.router.navigate(['private']);
+    this.uploader.onCompleteItem = (res, user) => {
+      //console.log("te registre y devolvi esto: ",user) //user viene en forma de texto
+      const u = JSON.parse(user);
+      //console.log(u);
+      localStorage.setItem('user', user);
+      this.router.navigate(['private']);
+    }
   }
 }

@@ -8,8 +8,8 @@
    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi molestias earum nemo, praesentium dicta quas similique facilis architecto reiciendis. Sed illo, necessitatibus nobis maxime culpa eius suscipit debitis quod cupiditate!</p>
    <div class="card-testament">
    <h3>Testament Form</h3>     
-       <label>Last Will and Testament of: {{username}}</label>
-          <input type="text" [(ngModel)]="author" name="author"/>
+       <label>Last Will and Testament of:</label>
+          <input type="text" [(ngModel)]="owner" name="author"/>
             <br>
           <label> Start Writing</label>
           <input type="text" [(ngModel)]="description" name="description"/>
@@ -20,8 +20,6 @@
   </div>
   <button class="btn waves-effect waves-teal" type="submit">Save and Continue</button>
 </form>
-
-
 </body>
    
         <p class="error"> {{ error }} </p>   

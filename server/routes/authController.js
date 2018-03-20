@@ -5,7 +5,7 @@ const User           = require("../models/User");
 const bcrypt         = require("bcrypt");
 const bcryptSalt     = 19;
 const multer = require("multer");
-const upload = multer ({dest: "./public/uploads"})
+const upload = multer ({dest: "./public/uploads"});
 
 authController.post("/signup", upload.single("file"), (req, res) => {
   if (!req.body.username || !req.body.lastName  || !req.body.email || !req.body.password) {
@@ -77,6 +77,15 @@ authController.get("/loggedin", (req, res) => {
 authController.post("/logout", (req, res) => {
   req.logout();
   res.status(200).json({ message: "Success" });
+});
+
+
+
+//aqui es un patch del usuario que deberia estar en user en vez de aqui...
+authController.patch('/update/user', (req,res)=>{
+  User.findByIdAndUpdate(req.user._id, req.body, {new:true})
+  .then(user=>res.json(user))
+  .catch(e=>res.json(e));
 });
 
 

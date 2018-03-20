@@ -20,6 +20,10 @@ export class AuthLoginComponent implements OnInit {
 
   sendForm () {
      this.sessionS.login(this.formInfo.username, this.formInfo.password)
-       .subscribe(respuesta => this.route.navigate(['private']));
+       .subscribe(respuesta =>{
+         console.log("hize login:",respuesta);
+        localStorage.setItem('user', JSON.stringify(respuesta));
+       this.route.navigate(['private'])
+      });
   }
 }

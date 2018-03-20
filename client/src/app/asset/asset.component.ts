@@ -26,7 +26,7 @@ export class AssetComponent implements OnInit {
 
   ngOnInit() {
     this.activateRouter.params.subscribe(params => {
-      this.testamentID = params["idTestament"];
+      this.testamentID = params['idTestament'];
       this.uploader.options.url = `http://localhost:3000/api/asset/createAsset/${
         this.testamentID
       }`;
@@ -56,7 +56,7 @@ export class AssetComponent implements OnInit {
   }
 
   nextStep() {
-    this.route.navigate(["/payment-method"]);
+    this.route.navigate(['/payment-method']);
   }
 
   deleteCard() {

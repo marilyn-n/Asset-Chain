@@ -7,10 +7,10 @@ const userSchema = new Schema({
   email: String,
   password: String,
   picPath: String,
-  docs:[{
+  testament:{
     type:Schema.Types.ObjectId,
     ref:"Testament"
-  }]
+  }
 }, {
   timestamps: {
     createdAt: "created_at",
