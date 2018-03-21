@@ -17,7 +17,7 @@ router.post('/new', (req, res, next) =>{
      owner: req.user._id,
      description: req.body.description,
      executorEmail: req.body.executorEmail,
-    // assetId: req.body.assetId,
+     //assetId: req.body.assetId,
     // password: req.body.password,
     // BlockchainSecret: req.body.BlockchainSecret,
     // BlockchainIndex: req.body.BlockchainIndex
@@ -37,20 +37,30 @@ function hackToUpdateUser(userId, testamentId){
 
 // show testament 
 //ruta por la cual , nos devuelva el testamento y los bienes relacionados con la misma.
-router.get('/testament-details', (req, res, next) => {
-  Testament.findById({owner:req.user._id})
-  .then(result1 => {
-    console.log(result1)
-    Asset.find({idTestament: result1._id})
-      .then(result2 =>  {
-        const resultTotal= {
-          testament:result1,
-          assets:result2
-        }
-        res.status(200).json(resultTotal)
-      })
-  })
+router.get('/testament-details', (req, res) => {
+  // console.log("dentro de details")
+  // Testament.find({owner:req.user._id})
+  // .populate('assets')
+  // .then(result1 => {
+  //   console.log(result1)
+  //   Asset.find({idTestament: result1._id})
+  //     .then(result2 =>  {
+  //       console.log(result2)
+  //       const resultTotal= {
+  //         testament:result1,
+  //         assets:result2
+  //       }
+  //       res.status(200).json(resultTotal)
+  //     })
+  // })
+
+  Testament.findById(req.user.testament)
+  .populate('assets')
+  .then(testament=>res.json(testament))
+  .catch(e=>res.json(e))
 })
+
+
 
 // edit testament
 

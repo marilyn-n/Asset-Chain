@@ -15,7 +15,7 @@ export class AssetService {
     return Observable.throw(e.json().message);
   }
   addAsset(myForm) {
-    return this.http.post(`${this.base_URL}/asset/benefitiarie`, myForm, this.options)
+    return this.http.post(`${this.base_URL}/asset/benefitiaries`, myForm, this.options)
       .map(res => res.json())
       .catch(err => this.handleError(err));
   }
@@ -31,7 +31,7 @@ export class AssetService {
       .catch(err => this.handleError(err));
     }
 
-    removeItem(item) {
+  removeItem(item) {
       return this.http.delete('http://localhost:3000/api/asset')
       .map(item => item)
       .catch(e => {

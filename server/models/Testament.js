@@ -5,7 +5,7 @@ const testamentSchema = new Schema({
 owner: { type: Schema.Types.ObjectId, ref: 'User'},
 description:{type: String},
 executorEmail: String,
-assetId: {type: String},
+assets: [{type: Schema.Types.ObjectId,ref:"Asset"}],
 password: {type: String},
 BlockchainSecret: {type: String},
 BlockchainIndex: {type: Number}

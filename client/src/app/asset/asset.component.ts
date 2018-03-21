@@ -2,9 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { AssetService } from "../services/asset.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import { FileUploader } from "ng2-file-upload";
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
+import {TestamentService} from '../services/testament.service';
 
 @Component({
   selector: "app-asset",
@@ -18,26 +16,32 @@ export class AssetComponent implements OnInit {
 
   assets = [];
   testamentID;
+  testament;
   constructor(
     private assetS: AssetService,
     private route: Router,
-    private activateRouter: ActivatedRoute
+    private activateRouter: ActivatedRoute,
+    private testamentS: TestamentService
   ) {}
 
   ngOnInit() {
     this.activateRouter.params.subscribe(params => {
       this.testamentID = params['idTestament'];
-      this.uploader.options.url = `http://localhost:3000/api/asset/createAsset/${
-        this.testamentID
-      }`;
+      this.uploader.options.url = `http://localhost:3000/api/asset/createAsset/${this.testamentID}`;
     });
     this.getAssets();
   }
   getAssets() {
-    this.assetS.getAllAsset().subscribe(assets => {
-      this.assets = assets;
-      console.log(this.assets);
-    });
+    this.testamentS.getTestament()
+    .subscribe(testament => {
+      console.log(testament);
+      this.testament = testament;
+      this.assets = this.testament.assets;
+    })
+    // this.assetS.getAllAsset().subscribe(assets => {
+    //   this.assets = assets;
+    //   console.log(this.assets);
+    // });
   }
 
   submitForm(myForm) {
@@ -51,6 +55,7 @@ export class AssetComponent implements OnInit {
     console.log(this.uploader);
     this.uploader.uploadAll();
     this.uploader.onCompleteItem = (fileItem, response, status, headers) => {
+      console.log(response);
       this.getAssets();
     };
   }

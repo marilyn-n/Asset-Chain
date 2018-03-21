@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TestamentService } from '../services/testament.service';
+import { AssetService } from '../services/asset.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,13 +10,17 @@ import { Router } from '@angular/router';
 })
 export class TestamentDetailsComponent implements OnInit {
   testament: any;
-  constructor(private testamentS: TestamentService, private router: Router) { }
+  constructor(private testamentS: TestamentService, private router: Router, private assetS: AssetService) { }
 
   ngOnInit() {
     this.testamentS.getTestament()
-      .subscribe(myTestament => this.testament = myTestament);
-  }
+    .subscribe(myTestament => {
+      this.testament = myTestament
+      console.log(this.testament);
+  });
 
 
 
 }
+}
+

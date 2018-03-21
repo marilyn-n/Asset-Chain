@@ -11,8 +11,7 @@ router.post("/assets/benefitiaries", (req, res) => {
     .json({ message: "choose benefitiaries and add assets" });
 });
 
-router.post(
-  "/createAsset/:idTestament",
+router.post("/createAsset/:idTestament",
   upload.single("file"),
   (req, res, next) => {
     const newAsset = new Asset({
@@ -23,10 +22,15 @@ router.post(
       idTestament: req.params.idTestament,
       file: `${req.file.filename}`
     });
-    console.log("entrar al post de crear");
-    newAsset
-      .save()
-      .then(respuesta => res.status(200).json(respuesta))
+    newAsset.save()
+      .then(respuesta =>{
+        console.log(respuesta);
+          Testament.findByIdAndUpdate(req.params.idTestament, {$push:{assets:respuesta._id}},{new:true})
+          .then(testamentModified=>{
+            res.status(200).json({asset:respuesta,testament:testamentModified})
+          })
+         
+        })
       .catch(err => res.status(400).json(err));
   }
 );

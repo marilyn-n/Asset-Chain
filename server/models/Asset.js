@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
-const assetDetails = {
+const AssetSchema = new Schema({
   userId:String,
   assetName:{type: String},
   assetType: {type: String},
@@ -10,15 +10,12 @@ const assetDetails = {
   description: {type: String},
   file: {type:String},
   idTestament:{type: Schema.Types.ObjectId, ref: 'Testament'}
-}
+},{
+  timestamps: {
+    createdAt: "created_at",
+    updatedAt: "updated_at"
+  }
+});
 
-const assetSchema = new Schema(assetDetails,
-    { timestamps: 
-      {
-       createdAt: 'created_at' ,
-       updatedAt: 'updated_at' }
-})
-
-const Asset = mongoose.model("Asset", assetSchema);
-
+const Asset = mongoose.model('Asset', AssetSchema);
 module.exports = Asset;

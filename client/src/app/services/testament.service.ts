@@ -12,7 +12,7 @@ export class TestamentService {
   handleError(e) {
     return Observable.throw(e.json().message);
   }
-
+  // show testament details
   getTestament() {
     return this.http.get(`${this.base_URL}/api/testament/testament-details`, this.options)
       .map(res => res.json())
