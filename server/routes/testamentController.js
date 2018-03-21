@@ -17,18 +17,15 @@ router.post('/new', (req, res, next) =>{
      owner: req.user._id,
      description: req.body.description,
      executorEmail: req.body.executorEmail,
-     //assetId: req.body.assetId,
-    // password: req.body.password,
-    // BlockchainSecret: req.body.BlockchainSecret,
-    // BlockchainIndex: req.body.BlockchainIndex
    });
+
    myTestament.save()
     .then(result =>{
         hackToUpdateUser(req.user._id, result._id);
         res.json(result);
       })
     .catch(err => res.status(400).json({message:err}))
-});
+  });
 
 function hackToUpdateUser(userId, testamentId){
   User.findByIdAndUpdate(userId, {testament:testamentId}, {new:true})
@@ -61,13 +58,10 @@ router.get('/testament-details', (req, res) => {
 })
 
 
-
-// edit testament
-
-
 router.post('/payment-method',(req, res) => {
   return res.status(403).json({ message: 'payment method' });
 });
+
 
 module.exports = router;
 

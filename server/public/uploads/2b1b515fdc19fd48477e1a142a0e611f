@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mi CV</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Generator" content="CV Maker - https://cvmkr.com/" />
+	<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		body {
+			background: #f0f0f0;
+			margin: 0;
+			padding: 0;
+			
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			line-height: 20px;
+			font-size: 13px;
+
+			color: #222;
+            
+		}
+
+		h1, h2, h3, h4 {
+			font-family: 'Oswald', Impact, Helvetica, Arial, sans-serif;
+			font-weight: normal;
+			margin: 0 0 15px 0;
+			padding: 0;
+		}
+		h1 {
+			font-size: 300%;
+		}
+		h2 {
+			font-size: 210%;
+		}
+		h3 {
+			font-size: 130%;
+		}
+		
+		p {
+			margin: 0 0 10px 0;
+		}
+		
+		ul {
+			margin: 0;
+			list-style-type: square;
+		}
+		a {
+			color: #222;
+		}
+		/* ________________________________________________________ */
+		.rtl {
+			direction: rtl;
+		}
+		.clear {
+			clear: both;
+		}
+
+		#main {
+			background: #fff;
+			width: 900px;
+			padding: 35px;
+			margin: 0 auto 15px auto;
+			overflow: hidden;
+			
+			box-shadow: 0 0 6px #ccc;
+		}
+
+		#title {
+			line-height: 42px;
+			border-bottom: 6px solid #000;
+			padding-bottom: 30px;
+			margin: 0px 0 30px 0;
+            
+		}
+		
+		#credit {
+			margin-bottom: 20px;
+			font-size: 11px;
+			color: #999;
+			text-align: center;
+            
+		}
+			#credit a {
+				color: #999;
+			}
+		
+		p label {
+			font-family: 'Oswald', Helvetica, Arial, serif;
+			
+			font-size: 110%;
+			margin-right: 10px;
+		}
+			p label span.colon {
+				display: inline;
+			}
+
+		
+		.section {
+			margin-bottom: 40px;
+		}
+		.section .set {
+		}
+		.item {
+			margin: 0 0 20px 0;
+		}
+
+		/*  _____________________________ */
+		.section .title {
+			text-transform: uppercase;
+			font-size: 170%;
+
+			padding: 10px 10px;
+			margin: 0 auto 15px auto;
+
+			display: inline-block;
+			background: #000;
+			color: #fff;
+		}
+			.section .set h3 {
+				margin: 0;
+			}
+
+
+
+		.basic-info {
+			border-top: 0;
+		}
+		.section.basic-info .title {
+			float: left;
+			border: 0;
+		}
+		.basic-info .set {
+			float: right;
+			width: 70%;
+		}
+		.basic-info .address {
+			width: 40%;
+			float: left;
+		}
+		.basic-info .r {
+			float: right;
+			width: 60%;
+			text-align: right;
+		}
+			.basic-info label {
+				font-family: 'Oswald', Helvetica, Arial, serif;
+			}
+			.basic-info label, .basic-info span  {
+				display: inline !important;
+			}
+		.basic-info p {
+			margin: 0;
+		}
+		
+		.section span.value {
+			display: block;
+		}
+		.section h3 span.l, .section span.r {
+			width: 49%;
+			float: left;
+		}
+			.section span.r {
+				float: right;
+				text-align: right;
+			}
+			.section-education .school,
+			.section-work .job_title {
+				font-size: 100%;
+				display: block;
+				margin: 5px 0 5px 0;
+			}
+
+
+		#photo {
+			width: 250px;
+			height: 350px;
+			overflow: hidden;
+			float: left;
+			margin-top: 4px;
+			border-radius: 4px;
+		}
+		#photo img {
+			width: 100%;
+			height: auto;
+		}
+		.header.photo {
+			margin-left: 265px;
+		}
+		.header.photo #title {
+			text-align: left;
+		}
+		.header.photo .basic-info {
+			float: none;
+			padding: 0;
+		}
+
+
+		@media screen and (max-width: 950px) {
+			body {
+				background: #fff;
+			}
+			#main {
+				box-shadow: none;
+				padding: 0;
+				padding: 5px;
+			}
+		}
+	</style>
+</head>
+<body class="lang-en ">
+
+<div id="main">
+			<div id="photo">
+			<img src="http://files1.cvmkr.com/9ee246_1028881_3044604.jpg" alt="" />
+		</div>
+		<div class="header photo">
+	
+	<h1 id="title">Marilyn Negrete</h1>
+	<div class="basic-info section">
+		<h2 class="title">Contacto</h2>
+	<div class="set">
+            
+            
+	
+							<p class="address">
+					<span class="value">
+                        Calle 75 Nte., Ejidal, Cerrada Paseo del Virrey #9 Playa del Carmen, Q.Roo. 77712
+ Mexico					</span>
+				</p>
+						<div class="r">
+									<p class="email"><label>E-mail<span class="colon">:</span></label> <span class="value">negrete.aguilar.m@gmail.com</span></p>
+				
+									<p class="phone"><label>Telefono<span
+                      class="colon">:</span></label> <span class="value">+52 1 5578480440 </span></p>
+                             
+                                    <p class="phone"><label>Linked In<span class="colon">:</span></label> <span class="value"><a href="https://www.linkedin.com/in/marilyn-negrete-384b84b0?trk=" rel="nofollow">http://goo.gl/BSbfNq</a></span></p>
+							</div>
+            
+            <div class="set">
+                                
+                          
+                    <div class="clear"> </div>
+                        </div><!-- set //-->
+                            <div class="clear"> </div>
+                              </div><!-- basic-info //-->
+
+                                    </div><div class="clear"> </div>
+            
+            
+              <h1 id="title"></h1>
+		
+			<div class="section section-work">
+			<h2 class="title">Experiencia de Trabajo</h2>
+			<div class="set">
+                
+                
+                	<div class="item">
+									<h3><span class="company l">Tutora de Español</span>
+							<span class="date r">Marzo 2016 &mdash; Presente (1 año)</span>
+								</h3>
+								<div class="clear"> </div>
+								<span class="job_title">Italki </span><div class="info"><span>Me dedico actualmente a dar clases de español. Ayudo a los estudiantes a mejorar su habla española y acento. Trabajo con ellos a través de Skype, Hangouts, Messenger y VoIP. Enseño a niños y adultos</span></div><div class="clear"> </div>
+								</div>
+                
+								<div class="item">
+									<h3><span class="company l">Tutora de Español</span>
+							<span class="date r">Enero 2016 &mdash; Abril 2016</span>
+								</h3>
+								<div class="clear"> </div>
+								<span class="job_title">Tutora de Español | Italia</span><div class="info"><span>Tuve la oportunidad de enseñar español y viajar por Europa. Enseñado varias clases durante toda la semana. 
+Era una mezcla de leer, escribir, hablar, escuchar tutoriales, examinar y orientar el progreso. Grupo pequeño de niños y adultos.</span></div><div class="clear"> </div>
+								</div>
+							
+								<div class="item">
+									<h3><span class="company l">Diseñadora Web</span>
+							<span class="date r">Sep 2015 &mdash; Actualmente trabajo aqui.</span>
+								</h3>
+								<div class="clear"> </div>
+								<span class="job_title">Purple Palm | Mexico</span><div
+                  class="info"><span>PurplePalm es una agencia digital, iniciado por mí (Marilyn) en 2015 como una manera de poner algo que me gusta hacer en el mundo real. Creo sitios web para pequeños y medianos negocios <br> 
+
+Me especializo en la web 2.0, social media marketing, SEO y presencia digital a través de diseño de sitios web y marketing social. También al desarrollo de soluciones a medida con sitios HandCrafting utilizando html, css y noticias de marcos.</span><div><span><span><br /></span></span><div><div><span><span></span></span></div><div><span></span></div></div></div></div><div class="clear"> </div>
+								</div>
+							
+								<div class="item">
+									<h3><span class="company l">Diseñadora Web/ Estrategia de redes sociales / Gerente de oficina</span>
+							<span class="date r">Jul 2015 &mdash; Dec 2015</span>
+								</h3>
+								<div class="clear"> </div>
+								<span class="job_title">Nest Coworking Space | Mexico</span><div class="clear"><span>Ayudaba a los nuevos clientes a que se acomodaran en la oficina, por ejemplo, les mostraba todo, emitían tarjetas de wifi, registraba a los clientes para que obtubieran un plan de membresía, etc. Coordinaba las juntas o citas con los posibles miembros y les ayude a resolver dudas o preocupación que puedan tener. Actuaba como la "cara" o "punto de contacto" para los miembros. Me aseguraba de que el
+el espacio estubiera muy bien gestionado por los roadies, incluyendo salas de reuniones, cocina, área de recepción, espacios comunes, y
+escritorios. Checaba que los suministros estubieran abastecieron, por ejemplo, bocadillos, papel, tóner y shampoo. Tenia acceso al manejo de caja chica para gastos menores.
+
+Daba asignación de tareas, gestión de las comunicaciones, por lo que todos los empleados estaban bajo mi cargo y haciendo algo.
+
+Hice la comercialización de productos a través de los medios sociales para impulsar las ventas.</span> </div>
+								</div>
+							
+								<div class="item">
+									<h3><span class="company l">Diseñadora Web</span>
+							<span class="date r">Feb 2015 &mdash; Jun 2016</span>
+								</h3>
+								<div class="clear"> </div>
+								<span class="job_title">Copyleft Solutions | Mexico</span><div class="info"><div><span><span>Creaba y administraba de aplicaciones web para los clientes, usando una variedad de herramientas CMS.
+Introducía nuevos métodos de endurecimiento WordPress. Tenia reuniones con los clientes para identificar sus necesidades y el enlace con regularidad
+con ellos; la elaboración de especificaciones detalladas del sitio web; el diseño de los diseños de página de muestra incluyendo el tamaño del texto y
+colores; diseño de gráficos, animaciones y manipulación de fotografías digitales; registraciones de dominio web, organizaba el alojamiento de la página web; la presentación de ideas de diseño iniciales a los clientes; de codificación utilizando una variedad de software; trabajaba con diferentes sistemas de gestión de contenidos; los requisitos legales pertinentes, tales como las normas de accesibilidad, la libertad de información y la privacidad; diseño
+imágenes visuales de la página web y asegurar que está en línea con la política de marca de empresa o de los requisitos de la
+cliente; corrección de pruebas de contenido, hacía cambios cuando fuera necesario; edición de contenido, código de depuración y rediseño de páginas web; trabajaba con otros especialistas web, incluyendo los desarrolladores web y diseñadores gráficos; el enlace con organismos externos; probavamos el sitio web para asegurarnos de que funcionaba al 100 para la entrega del sitio web completado
+al cliente; post-venta de apoyo técnico; El personal del cliente de aprendizaje; investigación de las tendencias actuales de diseño;
+desarrollo profesional continuo para mantener al día con los nuevos desarrollos de software.</span></span></div></div><div class="clear"> </div>
+								</div>
+							
+								<div class="item">
+									<h3><span class="company l">Asesor de Ventas</span>
+							<span class="date r">Apr 2014 &mdash; Dec 2014</span>
+								</h3>
+								<div class="clear"> </div>
+								<span class="job_title">Selther & Simmons | Mexico</span><div class="clear"><span>Ventas - Televentas / Telemarketing de mercancías de alto valor para empresas y particulares.  Hacia las ventas y ajustaba el contenido de las presentaciones de ventas por estudiar el tipo de punto de venta o factor de comercio. 
+Presentaba órdenes, haciendo referencia a las listas de precios y ficha técnica del producto. mantiene la gestión informada mediante la presentación de la actividad y los resultados de los informes, como los informes de llamadas diarias, semanales planes de trabajo. </span> </div>
+								</div>
+							</div>
+		</div>
+               <h1 id="title"></h1>
+                <div class="section section-qualifications">     
+    
+							<h2 class="title">Educacion</h2>
+                
+                <div class="item">
+							<h3><span class="course l">British English Institute, London</span>
+						<span class="date r">Jun 2016 &mdash; Sep 2016</span>
+							</h3>
+							<div class="clear"> </div>
+							<span class="school"> Me comunicaba con hablantes nativos en la ciudad de Londres. Fue una gran oportunidad para mí viajar en Europa.</span><div class="info">Grade: Merit<div> <div
+                    class="info">Qualification: Certificate<div></div><br /></div><div> </div><span class="clear"> </span>
+						</div>
+                
+                
+                <div class="item">
+							<h3><span class="course l">American School, Manila Phillipines</span>
+						<span class="date r">Apr 2016 &mdash; Jun 2016</span>
+							</h3>
+							<div class="clear"> </div>
+							<span class="school"> English Profiency</span><div
+                class="info">Grade: Merit<div> <div class="info">Qualification: Certificate<div></div><br /></div><div> </div><span class="clear"> </span>
+						</div>
+                
+                <div class="item">
+							<h3><span class="course l">Platzi Institute</span>
+						<span class="date r">Aug 2015 &mdash; Dec 2016</span>
+							</h3>
+							<div class="clear"> </div>
+							<span class="school"> Front End Development</span><div
+                class="info">Specialization:<div><br /></div><div>-
+                  Intermediate Programming</div><div>- Adobe Photoshop CS6</div><div>- WordPress</div></div><span class="clear"> </span>
+						</div>
+                
+						<div class="item">
+							<h3><span class="course l">Codecademy</span>
+						<span class="date r">Jan 2015 &mdash; Aug 2015</span>
+							</h3>
+							<div class="clear"> </div>
+							<span class="school"> Fundamentos de la programación| Front End
+                Developer Courses</span><div
+                class="info">Specialización:<div><br /></div><div>- Programación básica</div><div>- HTM5L&CSS3</div><div>-
+                  Javascript</div><div>- Shell Scripting</div><div>- LAMP on AWS </div></div><span class="clear"> </span>
+						</div>
+                
+                <div class="item">
+							<h3><span class="course l"> High School Diploma   </span>
+						<span class="date r">Aug 2011 &mdash; Aug 2014</span>
+							</h3>
+							<div class="clear"> </div>
+							<span class="school">Bachilleres "04 CuLHUACAN" Lazaro Cardenas  </span><div
+                class="info">Specialization:<div><br /></div><div>-
+                  Math</div><div>- English</div><div>- Graphic Design and
+                  Computer Programming </div></div><span class="clear"> </span>
+						</div>
+                
+                
+						</div>
+                    <h1 id="title"></h1>
+                    
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-interests">
+			<h2 class="title">Intereses</h2>
+			<div class="set">
+							<div class="item">
+								<span
+                  class="info"><div><span> Acampar, Backpacking, Vlogging, Viajes en bote , Escalar, Painting, Escribir, Leer novelas, Gym,
+                      Correr </span></div></span>
+							</div>
+						</div>
+			<div class="clear"> </div>
+		</div>
+                    <h1 id="title"></h1>
+                    <h2 class="title">Idiomas</h2>
+                     <div>- Español: Nativo y Bilingüe</div><div>-
+                       Ingles: Avansado</div><div>-
+                       Italiano: Básico</div>
+                    
+                    <h1 id="title"></h1>
+                    </div>
+                    <h2 class="title">Datos Personales</h2>
+                    <div>Fecha de nacimiento : Abril 13, 1996</div><div>Edad : 20 años</div><div>Peso : 125 lbs (56 kg)</div><div>Altura : 5’10" (170cm)</div>
+                    
+                    <h1 id="title"></h1>
+                    
+			<div class="section section-references">
+			<h2 class="title">Referencias</h2>
+			<div class="set">
+							<div class="item">
+								<span class="info">Referencias disponibles a petición.</span>
+							</div>
+						</div>
+			<div class="clear"> </div>
+		</div>
+		
+</div>
+	<div id="credit"> <a href="https://cvmkr.com/"></a></div>
+	
+</body>
+</html>

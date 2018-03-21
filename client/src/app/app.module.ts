@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { FileSelectDirective } from 'ng2-file-upload';
+import { FileUploadModule } from 'ng2-file-upload';
 // services
 import { SessionService } from './services/session.service';
 import { TestamentService } from './services/testament.service';
@@ -37,13 +37,13 @@ import { TestamentDetailsComponent } from './testament-details/testament-details
     PaymentMethodComponent,
     HomeComponent,
     NavbarComponent,
-    FileSelectDirective,
     AddPhotoComponent,
     StripeFormComponent,
     TestamentDetailsComponent
   ],
   imports: [
     BrowserModule,
+    FileUploadModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes)

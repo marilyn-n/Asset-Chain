@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express        = require("express");
 const path           = require("path");
 const favicon        = require("serve-favicon");
@@ -15,8 +16,8 @@ const EmailService = require('./models/EmailService.js');
 
 // Mongoose configuration
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/angular-authentication")
-  .then(console.log("Connected to DB!!"))
+mongoose.connect(process.env.mongoURL)
+  .then(console.log(`connected to ${process.env.mongoURL}`))
 
 // Session
 

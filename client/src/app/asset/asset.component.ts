@@ -37,11 +37,7 @@ export class AssetComponent implements OnInit {
       console.log(testament);
       this.testament = testament;
       this.assets = this.testament.assets;
-    })
-    // this.assetS.getAllAsset().subscribe(assets => {
-    //   this.assets = assets;
-    //   console.log(this.assets);
-    // });
+    });
   }
 
   submitForm(myForm) {
