@@ -3,6 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { FileUploadModule } from 'ng2-file-upload';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+// toastr
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
+
+
 // services
 import { SessionService } from './services/session.service';
 import { TestamentService } from './services/testament.service';
@@ -46,7 +52,9 @@ import { TestamentDetailsComponent } from './testament-details/testament-details
     FileUploadModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ToastModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [
     SessionService,

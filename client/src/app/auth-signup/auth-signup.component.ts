@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SessionService } from '../services/session.service';
 import { Router } from '@angular/router';
 import { FileUploader } from 'ng2-file-upload';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 
 @Component({
