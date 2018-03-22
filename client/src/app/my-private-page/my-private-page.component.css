@@ -57,10 +57,14 @@ p{
   position: relative;
   right: 620px;
   bottom: 300px;
-  padding: 20px;
+  padding: 35px;
   margin:10px;
   width: 100px;
-  background-color: rgb(145, 180, 201);
+  background-color: #f9e6a2;
   float: right;
 }
 
+a{
+  position: relative;
+  right: 20px;
+}

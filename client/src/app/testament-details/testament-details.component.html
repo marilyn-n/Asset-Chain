@@ -1,27 +1,24 @@
 <app-navbar></app-navbar>
+<button class="btn waves-effect waves-light" type="submit" name="action">Edit
+    <i class="material-icons">border_color</i>
+</button>
+
+<button class="btn waves-effect waves-light" type="submit" name="action">Delete
+    <i class="material-icons">delete</i>
+</button>
+<div class="testament-details"> 
 <h1>Last Will and Testament by {{testament.testament[0].owner}}</h1>
 
 <p>{{ testament | json}}</p>
-<h2>Testament</h2>
 
 <p>{{testament.testament[0].description}}</p>
-<p> <b> Executor Contact:</b> {{testament.testament[0].executorEmail}}</p>
-<p> <b> Created at:</b> {{testament.testament[0].created_at}}</p>
+<p class="data-info"> <b> Executor Contact:</b> {{testament.testament[0].executorEmail}}</p>
+<p class="data-info"> <b> Created at:</b> {{testament.testament[0].created_at}}</p>
 
 <h2>Beneficiaries</h2>
 
-<ul>
-  <li>{{testament.testament.assets.assets[0]}}</li>
+<ul *ngFor="let asset of assets">
+  <li>{{asset.assets[0]}}</li>
 </ul>
 
-<!-- { "testament": [ { "_id": "5ab28425371b6ffd92e0390a", "updated_at": "2018-03-21T16:11:17.529Z", 
-"created_at": "2018-03-21T16:11:17.529Z", "owner": "5ab283f3371b6ffd92e03909", "description": "Adios mundo cruel",
- "executorEmail": "georgie@gmail.die", "__v": 0 }, 
-
- { "_id": "5ab28e9bfb9731ff243bc5b6",
-  "updated_at": "2018-03-21T16:55:55.743Z", "created_at": "2018-03-21T16:55:55.743Z",
-   "owner": "5ab283f3371b6ffd92e03909", "description": "dfglñ",
-    "executorEmail": "dfghjklñ´", "__v": 0 }, { "_id": "5ab28eb1fb9731ff243bc5b7",
-     "updated_at": "2018-03-21T16:56:17.163Z", "created_at": "2018-03-21T16:56:17.163Z",
-      "owner": "5ab283f3371b6ffd92e03909", "description": "fghjklñ", 
-      "executorEmail": "tyuiop", "__v": 0 } ], "assets": [] } -->
+</div>
