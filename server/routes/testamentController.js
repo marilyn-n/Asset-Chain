@@ -4,6 +4,7 @@ const User    = require("../models/User.js");
 const Testament    = require("../models/Testament.js");
 const Asset = require ("../models/Asset.js")
 const EmailService = require('../models/EmailService')
+const driver = require('bigchaindb-driver')
 
 router.get('/all', (req,res,next)=> {
   Testament.find()
@@ -26,6 +27,27 @@ router.post('/new', (req, res, next) =>{
       })
     .catch(err => res.status(400).json({message:err}))
   });
+
+let bdb = new driver.Connection('https://test.bigchaindb.com/api/v1/', {
+        app_id: 'b5324ac9',
+        app_key: 'd06aea79d7643db7c33a8993a4140f5f'
+})
+
+const secret = new driver.Ed25519Keypair()        
+const text = myTestament.description
+const metadata = {'user': 'jeff bezos'}
+
+const txCreateData = driver.Transaction.makeCreateTransaction(
+        text, metadata,
+    [ driver.Transaction.makeOutput(
+            driver.Transaction.makeEd25519Condition(secret.publicKey))
+    ],
+    secret.publicKey
+)
+
+const txCreateDataSigned = driver.Transaction.signTransaction(txCreateData, secret.privateKey)
+
+bdb.postTransaction(txCreateDataSigned)
 
 function hackToUpdateUser(userId, testamentId){
   User.findByIdAndUpdate(userId, {testament:testamentId}, {new:true})
