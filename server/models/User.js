@@ -1,5 +1,6 @@
-const mongoose = require("mongoose");
-const Schema   = mongoose.Schema;
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
   username: String,
@@ -7,16 +8,16 @@ const userSchema = new Schema({
   email: String,
   password: String,
   picPath: String,
-  testament:{
-    type:Schema.Types.ObjectId,
-    ref:"Testament"
-  }
+  testament: {
+    type: Schema.Types.ObjectId,
+    ref: 'Testament',
+  },
 }, {
   timestamps: {
-    createdAt: "created_at",
-    updatedAt: "updated_at"
-  }
+    createdAt: 'created_at',
+    updatedAt: 'updated_at',
+  },
 });
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model('User', userSchema);
 module.exports = User;
