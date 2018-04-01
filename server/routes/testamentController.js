@@ -56,7 +56,6 @@ function hackToUpdateUser(userId, testamentId) {
 }
 
 router.get('/testament-details', (req, res) => {
-
   Testament.findById(req.user.testament)
     .populate('assets')
     .then(testament => res.json(testament))
