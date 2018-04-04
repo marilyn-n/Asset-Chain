@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Asset Chain</title>
@@ -9,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root>Loading...</app-root>
 </body>
@@ -17,18 +19,19 @@
 
 
 <!-- CDN -->
- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script>
-    $(".button-collapse").sideNav();
-    $('.dropdown-button').dropdown('open');
-    $(document).ready(function() {
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script>
+  $(".button-collapse").sideNav();
+  $('.dropdown-button').dropdown('open');
+  $(document).ready(function () {
     $('select').material_select();
-    $(document).ready(function(){
-    $('.collapsible').collapsible();
-  });
+    $(document).ready(function () {
+      $('.collapsible').collapsible();
+    });
   });    
 </script>
 <!-- Payment Method -->
 <script src="https://checkout.stripe.com/checkout.js"></script>
+
 </html>

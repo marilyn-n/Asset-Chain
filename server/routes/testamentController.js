@@ -32,11 +32,9 @@ router.post('/new', (req, res) => {
 //   app_id: 'b5324ac9',
 //   app_key: 'd06aea79d7643db7c33a8993a4140f5f',
 // });
-
 // const secret = new driver.Ed25519Keypair();
 // const text = myTestament.description;
 // const metadata = { user: 'jeff bezos' };
-
 // const txCreateData = driver.Transaction.makeCreateTransaction(
 //   text, metadata,
 //   [driver.Transaction.makeOutput(driver.Transaction.makeEd25519Condition(secret.publicKey)),
