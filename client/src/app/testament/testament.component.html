@@ -1,25 +1,51 @@
 <app-navbar></app-navbar>
 <body>
-<form class="bg-testament" (ngSubmit)="submitForm(testamentForm)" #testamentForm="ngForm"> 
-  <div class="testament-form">
-    <hr>    
-   <h1>LAST WILL AND TESTAMENT</h1>
-   <hr>
-<p>Creating a Last Will and Testament as a part of your estate plan will ensure all you leave behind</p>
-   <div class="card-testament">
-   <h3>Testament Form</h3>     
-       <label>Last Will and Testament of:</label>
-          <input type="text" [(ngModel)]="owner" name="author"/>
-            <br>
-          <label> Start Writing</label>
-          <input type="text" [(ngModel)]="description" name="description"/>
-          <br>
-          <label for="">Executor Email</label>
-          <input type="text" [(ngModel)]="executorEmail" name="executorEmail">
+  <form class="bg-testament" (ngSubmit)="submitForm(testamentForm)" #testamentForm="ngForm">
+    <div class="testament-form">
+      <hr />
+        <h1>LAST WILL AND TESTAMENT</h1>
+      <hr />
+      <p>
+        Creating a Last Will and Testament as a part of your estate plan will ensure all you leave behind
+      </p>
+      <div class="card-testament">
+       <h3>
+         Testament Form
+       </h3>
+       <label>
+         Last Will and Testament of:
+       </label>
+       <input
+         type="text"
+         [(ngModel)]="owner"
+         name="author"
+         />
+       <br />
+       <label>
+         Start Writing
+       </label>
+       <input
+         type="text"
+         [(ngModel)]="description"
+         name="description"
+         />
+       <br />
+       <label>
+         Executor Email
+       </label>
+       <input
+         type="text"
+         [(ngModel)]="executorEmail"
+         name="executorEmail"
+         />
+       </div>
     </div>
-  </div>
-  <button class="btn waves-effect waves-teal" type="submit">Save and Continue</button>
-</form>
+    <button
+      class="btn waves-effect waves-teal"
+      type="submit">
+      Save and Continue
+    </button>
+  </form>
 </body>
-   
-        <p class="error"> {{ error }} </p>   
+
+<p class="error"> {{ error }} </p>  
