@@ -2,9 +2,9 @@
 
 This is the capstone project showing a MEAN app.
 
-## Otline
+## Outline
 
-This app is a web app which lets the user, for a fee, add a testament to a bespoke blockchain database. 
+Asset Chain is a web app which lets the user, for a fee, add a testament to a bespoke blockchain database. 
 
 Assets can be registered as a usual CRUD app in Mongo. 
 
