@@ -1,12 +1,12 @@
 <app-navbar></app-navbar>
 <hr class="one-hr">
 <h1>ASSETS AND BENEFICIARIES</h1>
-<hr>
+<hr />
 <p class="asset-leyend"> Your beneficiaries are the people that will receive your property. These are normally
-  <br> your spouse, children, other relatives, and close friends.
-  <br> You can also make any special bequests regarding any digital assets you own. </p>
+  <br /> your spouse, children, other relatives, and close friends.
+  <br /> You can also make any special bequests regarding any digital assets you own. </p>
 <div class="card-reminder">
-  <p>Remind me via email to chek my account every</p>
+  <p>Remind me via email to chek my account every</p> <!–– ths should appear in other view for example after creating the account ––>
   <div class="input-field col s12">
     <select>
       <option value="" selected>Choose your option</option>
@@ -33,7 +33,7 @@
         <input class="file-path validate" type="text">
       </div>
     </div>
-    <br>
+    <br />  <!–– brs should be removed and do the styling correclty  ––>
     <label for="">Beneficiary Name</label>
     <input type="text" name="beneficiaryName" [(ngModel)]="beneficiaryName" />
     <label> Beneficiary Email</label>
@@ -56,22 +56,22 @@
   <ul *ngFor="let asset of assets" class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header col s2">
-        <i class="material-icons">assignment</i>{{asset.assetName}}
+        <i class="material-icons">assignment</i> {{asset.assetName}}
         <i (click)="deleteCard()" class="material-icons">delete_forever</i>
       </div>
       <div class="collapsible-body">
         <span>Asset Name:</span>
         {{asset.assetName}}
-        <br>
+        <br />
         <span>Beneficiary:</span>
         {{asset.beneficiaryName}}
-        <br>
+        <br />
         <span>Beneficiary Contact:</span>
         {{asset.beneficiaryEmail}}
-        <br> {{asset.assetEmail}}
+        <br /> {{asset.assetEmail}}
         <span>Asset:</span>
         <a href="{{asset.file}}">{{asset.file}}</a>
-        <br>
+        <br />
         <span>Short Description:</span>
         {{asset.description}}
       </div>

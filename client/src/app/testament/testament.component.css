@@ -1,25 +1,24 @@
-body{
+body {
   margin-top: 3em;
 
 }
 
-p{
+p {
   font-size: 25px;
   color: rgb(128, 131, 133);
 }
 
-hr{
+hr {
   border: 1px solid #E82011;
 }
 
-h3{
+h3 {
   text-align: center;
   font-size: 19px;
   font-weight: bold;
-
 }
 
-.bg-testament{
+.bg-testament {
   height: 250px;
   /* background-color:  #4272d7; */
   color: black;
@@ -27,26 +26,28 @@ h3{
   position: relative;
 }
 
-label{
+label {
   color:black;
 }
 
-h1{
+h1 {
   margin: 0;
   color: black;
 }
-.card-testament{
+
+.card-testament {
   background-color: white;
   position: relative;
   top:0px;
   border-radius: .9%;
   padding: 1em;;
   background-color: white;
-  box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);  height: 500px;
+  box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);  
+  height: 500px;
   margin-top: 2em;
 }
 
-.btn{
+.btn {
   background-color: #E82011;
   margin-top: 2em;
   margin-left:250px;

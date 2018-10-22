@@ -5,16 +5,12 @@ import { HttpModule } from '@angular/http';
 import { FileUploadModule } from 'ng2-file-upload';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-// toastr
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
-
-// services
 import { SessionService } from './services/session.service';
 import { TestamentService } from './services/testament.service';
 import { AssetService } from './services/asset.service';
 
-// components
 import { AppComponent } from './app.component';
 import { AuthLoginComponent } from './auth-login/auth-login.component';
 import { AuthSignupComponent } from './auth-signup/auth-signup.component';
@@ -23,7 +19,6 @@ import { TestamentComponent } from './testament/testament.component';
 import { AssetComponent } from './asset/asset.component';
 import { PaymentMethodComponent } from './payment-method/payment-method.component';
 
-// routes
 import { routes } from './routes/app.routing';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -63,4 +58,5 @@ import { TestamentDetailsComponent } from './testament-details/testament-details
     ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
