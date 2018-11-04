@@ -2,11 +2,12 @@
   <div class="landing">
     <video src="@/assets/video/Empire.mp4" autoplay loop></video>
     <img src="@/assets/img/ac-logo.png" alt="">
-    <app-button
-      class="get-started"
-      >
-    </app-button>
-    
+    <router-link :to="{name: 'login'}">
+      <app-button
+        class="get-started"
+        >
+      </app-button>
+    </router-link>
   </div>
 </template>
 
