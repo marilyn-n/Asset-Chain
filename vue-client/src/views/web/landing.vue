@@ -25,25 +25,31 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
-img {
-  position: absolute;
-  top: 400px;
-  left: 450px;
-  height: 115px;
-  width: 300px;
+@import "@/styles/vars.scss";
+
+.landing {
+  
+  img {
+    position: absolute;
+    top: 400px;
+    left: 450px;
+    height: 115px;
+    width: 300px;
+  }
+
+  video {
+  	width: 100%;
+  	height: 100%;
+  	margin-top: 5px;
+  }
+
+  .get-started {
+    position: absolute;
+    top: 400px;
+    left: 750px;
+  }
 }
 
-video{
-  width: 1420px;
-  height: 780;
-  margin: 0;
-}
-
-.get-started {
-  position: absolute;
-  top: 400px;
-  left: 750px;
-}
 </style>
