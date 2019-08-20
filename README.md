@@ -16,4 +16,5 @@ This App includes:
 
 * Blockchain Database
 
-* Automatic Emailer
+[live-demo](https://asset-chain.herokuapp.com/)
+
